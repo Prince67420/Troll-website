@@ -45,6 +45,255 @@
 			gap: 0.65rem;
 		}
 
+		.game-finder {
+			margin-top: 2rem;
+			border: 1px solid #bfd0c5;
+			border-radius: 10px;
+			padding: 1rem;
+			background: rgba(255, 255, 255, 0.7);
+			text-align: left;
+		}
+
+		.game-finder h2 {
+			margin: 0 0 0.75rem;
+			font-family: Georgia, serif;
+			font-size: 1.5rem;
+			font-weight: 500;
+		}
+
+		.game-search-input {
+			box-sizing: border-box;
+			width: 100%;
+			min-height: 2.9rem;
+			border: 1px solid #789487;
+			border-radius: 8px;
+			padding: 0.75rem 0.9rem;
+			font: inherit;
+		}
+
+		.game-search-results {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+			margin-top: 0.9rem;
+		}
+
+		.game-search-chip {
+			display: inline-flex;
+			align-items: center;
+			border: 1px solid #bfd0c5;
+			border-radius: 999px;
+			padding: 0.45rem 0.7rem;
+			background: #edf6f0;
+			color: #18372d;
+			font-size: 0.88rem;
+		}
+
+		.playground {
+			margin-top: 2.5rem;
+			border-top: 1px solid #bfd0c5;
+			padding-top: 1.5rem;
+		}
+
+		.playground-header {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			gap: 0.75rem 1rem;
+			margin-bottom: 1rem;
+		}
+
+		.playground h2 {
+			margin: 0;
+			font-family: Georgia, serif;
+			font-size: 1.7rem;
+			font-weight: 500;
+		}
+
+		.playground-actions {
+			margin: 0;
+			justify-content: flex-start;
+		}
+
+		.playground-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+			gap: 0.75rem;
+			text-align: left;
+		}
+
+		.arcade-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+			gap: 0.75rem;
+			margin-top: 1rem;
+			text-align: left;
+		}
+
+		.arcade-card {
+			min-height: 11rem;
+		}
+
+		.arcade-card p {
+			min-height: 3.5em;
+		}
+
+		.chaos-zone {
+			margin-top: 1rem;
+			border-color: #a72e2e;
+			background: #fff7f4;
+		}
+
+		.chaos-zone p {
+			color: #6b2a2a;
+		}
+
+		.viewer-hub {
+			margin-top: 2rem;
+			border-top: 1px solid #bfd0c5;
+			padding-top: 1.5rem;
+		}
+
+		.viewer-hub h2 {
+			margin: 0 0 0.5rem;
+			font-family: Georgia, serif;
+			font-size: 1.7rem;
+			font-weight: 500;
+		}
+
+		.viewer-note {
+			margin: 0 0 1rem;
+			color: #526a5f;
+			font-size: 0.9rem;
+		}
+
+		.viewer-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+			gap: 0.75rem;
+			text-align: left;
+		}
+
+		.poll-options {
+			display: grid;
+			gap: 0.5rem;
+			margin: 0 0 0.75rem;
+			border: 0;
+			padding: 0;
+		}
+
+		.poll-results p {
+			margin: 0.6rem 0 0.2rem;
+		}
+
+		.poll-results progress {
+			display: block;
+			width: 100%;
+			accent-color: #176b55;
+		}
+
+		.guestbook-form label {
+			display: block;
+			margin-top: 0.6rem;
+		}
+
+		.guestbook-form input,
+		.guestbook-form textarea {
+			box-sizing: border-box;
+			width: 100%;
+			margin-top: 0.25rem;
+			border: 1px solid #789487;
+			border-radius: 6px;
+			padding: 0.55rem;
+			font: inherit;
+		}
+
+		.guestbook-form textarea {
+			min-height: 5rem;
+			resize: vertical;
+		}
+
+		.guestbook-list {
+			max-height: 12rem;
+			margin-top: 0.75rem;
+			overflow-y: auto;
+		}
+
+		.guestbook-entry {
+			margin: 0;
+			border-top: 1px solid #d5e0d9;
+			padding: 0.6rem 0;
+			overflow-wrap: anywhere;
+		}
+
+		.memory-grid,
+		.ttt-grid,
+		.pet-grid {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: 0.5rem;
+			margin-top: 0.75rem;
+		}
+
+		.memory-tile,
+		.ttt-cell,
+		.pet-button {
+			min-height: 3rem;
+			border: 1px solid #789487;
+			border-radius: 8px;
+			background: #edf6f0;
+			color: #18372d;
+			font: inherit;
+			font-weight: 700;
+		}
+
+		.ttt-cell {
+			font-size: 1.2rem;
+		}
+
+		.mini-game {
+			border: 1px solid #bfd0c5;
+			border-radius: 6px;
+			padding: 1rem;
+			background: #fff;
+		}
+
+		.mini-game h3 {
+			margin: 0 0 0.5rem;
+			font-size: 1.05rem;
+		}
+
+		.mini-game p {
+			min-height: 1.5em;
+			margin: 0.5rem 0;
+			color: #526a5f;
+		}
+
+		.mini-game button {
+			margin: 0.25rem 0.25rem 0 0;
+		}
+
+		.mini-game input {
+			box-sizing: border-box;
+			width: 5rem;
+			min-height: 2.8rem;
+			border: 1px solid #789487;
+			border-radius: 6px;
+			padding: 0.5rem;
+			font: inherit;
+		}
+
+		.color-preview {
+			min-height: 2.5rem;
+			margin-top: 0.75rem;
+			border: 1px solid #789487;
+			border-radius: 4px;
+			padding: 0.5rem;
+			background: #f1f6f2;
+			color: #18372d;
+		}
+
 		button {
 			min-height: 2.8rem;
 			border: 1px solid #176b55;
@@ -108,6 +357,50 @@
 			color: #176b55;
 		}
 
+		dialog.rickroll-screen {
+			box-sizing: border-box;
+			position: fixed;
+			inset: 0;
+			width: 100vw;
+			max-width: none;
+			height: 100vh;
+			max-height: none;
+			margin: 0;
+			border: 0;
+			padding: 0;
+			overflow: hidden;
+			background: #000;
+			color: #fff;
+		}
+
+		.rickroll-screen img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.rickroll-close {
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+			border-color: #fff;
+			background: #18372d;
+			box-shadow: 0 2px 12px #000;
+		}
+
+		.visually-hidden {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			padding: 0;
+			margin: -1px;
+			overflow: hidden;
+			clip: rect(0, 0, 0, 0);
+			white-space: nowrap;
+			border: 0;
+		}
+
 		[hidden] {
 			display: none !important;
 		}
@@ -124,21 +417,184 @@
 			<button type="button" data-troll-fortune>Get a silly fortune</button>
 			<button type="button" data-troll-background>Change background</button>
 		</div>
+		<section class="game-finder" aria-labelledby="game-finder-title">
+			<h2 id="game-finder-title">Search the game vault</h2>
+			<label class="visually-hidden" for="game-search-input">Search games</label>
+			<input id="game-search-input" class="game-search-input" type="search" placeholder="Type a game name or keyword..." data-game-search>
+			<div class="game-search-results" data-game-search-results aria-live="polite"></div>
+		</section>
+		<section class="playground" aria-labelledby="playground-title">
+			<div class="playground-header">
+				<h2 id="playground-title">The Button Playground</h2>
+				<div class="troll-actions playground-actions">
+					<button type="button" data-troll-coin>Flip a coin</button>
+					<button type="button" data-troll-dice>Roll a die</button>
+					<button type="button" data-troll-eight-ball>Ask the eight ball</button>
+					<button type="button" data-troll-joke>Tell me a joke</button>
+					<button type="button" data-troll-compliment>Get a compliment</button>
+					<button type="button" data-troll-challenge>Pick a tiny challenge</button>
+					<button type="button" data-troll-band>Invent a band name</button>
+				</div>
+			</div>
+			<div class="playground-grid">
+				<section class="mini-game" aria-labelledby="counter-title">
+					<h3 id="counter-title">Very Important Counter</h3>
+					<p>Boops counted: <strong data-counter-value>0</strong></p>
+					<button type="button" data-counter-add>Boop the counter</button>
+					<button type="button" data-counter-reset>Reset</button>
+				</section>
+				<section class="mini-game" aria-labelledby="reaction-title">
+					<h3 id="reaction-title">Reaction Test</h3>
+					<p data-reaction-message>Press start, wait for green, then click.</p>
+					<button type="button" data-reaction-start>Start reaction test</button>
+				</section>
+				<section class="mini-game" aria-labelledby="guess-title">
+					<h3 id="guess-title">Guess the Number</h3>
+					<p data-guess-message>I'm thinking of a number from 1 to 20.</p>
+					<form data-guess-form>
+						<label for="guess-input">Your guess</label>
+						<input id="guess-input" type="number" min="1" max="20" required>
+						<button type="submit">Guess</button>
+						<button type="button" data-guess-new>New number</button>
+					</form>
+				</section>
+				<section class="mini-game" aria-labelledby="color-title">
+					<h3 id="color-title">Color Lab</h3>
+					<p>Give the page a fresh coat of pixels.</p>
+					<button type="button" data-color-change>Make a color</button>
+					<button type="button" data-color-reset>Restore original</button>
+					<div class="color-preview" data-color-preview aria-live="polite">Original bureau colors</div>
+				</section>
+				<section class="mini-game" aria-labelledby="lucky-title">
+					<h3 id="lucky-title">Lucky 7 Duel</h3>
+					<p data-lucky-message>Roll the dice and chase a total of 7.</p>
+					<button type="button" data-lucky-roll>Roll for 7</button>
+				</section>
+				<section class="mini-game" aria-labelledby="word-title">
+					<h3 id="word-title">Word Mixer</h3>
+					<p data-word-message>Unmix the letters and win the bragging rights.</p>
+					<button type="button" data-word-mix>Mix a word</button>
+				</section>
+				<section class="mini-game" aria-labelledby="mood-title">
+					<h3 id="mood-title">Mood Spinner</h3>
+					<p data-mood-message>Press the button to discover your bureau mood.</p>
+					<button type="button" data-mood-spin>Spin my mood</button>
+				</section>
+				<section class="mini-game" aria-labelledby="memory-title">
+					<h3 id="memory-title">Memory Flip</h3>
+					<p data-memory-message>Find all the matching emoji pairs.</p>
+					<div class="memory-grid" data-memory-grid>
+						<button class="memory-tile" type="button" data-memory-tile="1">?</button>
+						<button class="memory-tile" type="button" data-memory-tile="2">?</button>
+						<button class="memory-tile" type="button" data-memory-tile="3">?</button>
+						<button class="memory-tile" type="button" data-memory-tile="4">?</button>
+						<button class="memory-tile" type="button" data-memory-tile="5">?</button>
+						<button class="memory-tile" type="button" data-memory-tile="6">?</button>
+					</div>
+					<button type="button" data-memory-reset>Shuffle again</button>
+				</section>
+				<section class="mini-game" aria-labelledby="ttt-title">
+					<h3 id="ttt-title">Tiny Tic-Tac-Toe</h3>
+					<p data-ttt-message>Player X starts. Try to line up three.</p>
+					<div class="ttt-grid" data-ttt-grid>
+						<button class="ttt-cell" type="button" data-ttt-cell="0"> </button>
+						<button class="ttt-cell" type="button" data-ttt-cell="1"> </button>
+						<button class="ttt-cell" type="button" data-ttt-cell="2"> </button>
+						<button class="ttt-cell" type="button" data-ttt-cell="3"> </button>
+						<button class="ttt-cell" type="button" data-ttt-cell="4"> </button>
+						<button class="ttt-cell" type="button" data-ttt-cell="5"> </button>
+						<button class="ttt-cell" type="button" data-ttt-cell="6"> </button>
+						<button class="ttt-cell" type="button" data-ttt-cell="7"> </button>
+						<button class="ttt-cell" type="button" data-ttt-cell="8"> </button>
+					</div>
+					<button type="button" data-ttt-reset>Reset board</button>
+				</section>
+				<section class="mini-game" aria-labelledby="pet-title">
+					<h3 id="pet-title">Pocket Pet</h3>
+					<p data-pet-status>Your pocket pet is currently dramatic.</p>
+					<div class="pet-grid">
+						<button class="pet-button" type="button" data-pet-feed>Feed it</button>
+						<button class="pet-button" type="button" data-pet-play>Play with it</button>
+						<button class="pet-button" type="button" data-pet-rest>Nap time</button>
+					</div>
+				</section>
+				<section class="mini-game" aria-labelledby="story-title">
+					<h3 id="story-title">Bureau Story Forge</h3>
+					<p data-story-output>Press the button and a tiny ridiculous tale appears.</p>
+					<button type="button" data-story-generate>Generate story</button>
+				</section>
+				<section class="mini-game chaos-zone" data-chaos-zone aria-labelledby="chaos-title">
+					<h3 id="chaos-title">Chaos Corner</h3>
+					<p>Only this area is allowed to trigger the dramatic close warnings. The playground stays safe and stays inside the website.</p>
+					<button type="button" data-close-trap>Attempt to close this page</button>
+				</section>
+			</div>
+			<h3>120 more playable games</h3>
+			<div class="arcade-grid" data-arcade-grid aria-live="polite"></div>
+		</section>
 		<div class="troll-message" data-troll-output role="status" aria-live="polite" hidden>
 			<p data-troll-message></p>
 			<progress class="troll-progress" data-troll-progress max="100" value="0" aria-label="Status check progress" hidden></progress>
 		</div>
+		<section class="viewer-hub" aria-labelledby="viewer-hub-title">
+			<h2 id="viewer-hub-title">Arcade Lounge</h2>
+			<p class="viewer-note">Cast a vote or leave a note. This page saves both only in this browser.</p>
+			<div class="viewer-grid">
+				<section class="mini-game" aria-labelledby="poll-title">
+					<h3 id="poll-title">What should we add next?</h3>
+					<form data-viewer-poll>
+						<fieldset class="poll-options">
+							<legend class="visually-hidden">Choose a future feature</legend>
+							<label><input type="radio" name="feature" value="more-games" required> More mini-games</label>
+							<label><input type="radio" name="feature" value="sound-effects"> Silly sound effects</label>
+							<label><input type="radio" name="feature" value="secret-buttons"> Secret buttons</label>
+						</fieldset>
+						<button type="submit">Cast my vote</button>
+					</form>
+					<div class="poll-results" data-poll-results aria-live="polite"></div>
+					<p class="viewer-note" data-poll-message></p>
+				</section>
+				<section class="mini-game" aria-labelledby="guestbook-title">
+					<h3 id="guestbook-title">Bureau Guestbook</h3>
+					<form class="guestbook-form" data-guestbook-form>
+						<label for="guestbook-name">Name or nickname</label>
+						<input id="guestbook-name" name="name" maxlength="24" placeholder="Optional">
+						<label for="guestbook-note">Leave a short note</label>
+						<textarea id="guestbook-note" name="note" maxlength="120" required></textarea>
+						<button type="submit">Sign the guestbook</button>
+					</form>
+					<div class="guestbook-list" data-guestbook-list aria-live="polite"></div>
+					<p class="viewer-note" data-guestbook-message></p>
+				</section>
+			</div>
+		</section>
 		<footer class="site-footer">
-			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">A very important video</a>
+			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer" data-rickroll-trigger>Leave website</a>
+			<p>For feedback, feel free to contact me at <a href="mailto:brownca@think-usa.org">brownca@think-usa.org</a>.</p>
 		</footer>
 	</main>
+	<dialog class="rickroll-screen" data-rickroll-dialog aria-labelledby="rickroll-title">
+		<h2 class="visually-hidden" id="rickroll-title">You've been Rickrolled</h2>
+		<img src="https://media.tenor.com/x8v1oNUOmg4AAAAd/rickroll-roll.gif" alt="A dancing Rick Astley, playing the Rickroll song">
+		<button class="rickroll-close" type="button" data-rickroll-close>Close</button>
+	</dialog>
 	<script>
 		(() => {
 			const box = document.querySelector('main');
+			const rickrollTrigger = box.querySelector('[data-rickroll-trigger]');
+			const rickrollDialog = document.querySelector('[data-rickroll-dialog]');
+			rickrollTrigger.addEventListener('click', (event) => {
+				event.preventDefault();
+				rickrollDialog.showModal();
+			});
+			rickrollDialog.querySelector('[data-rickroll-close]').addEventListener('click', () => {
+				rickrollDialog.close();
+			});
 			const output = box.querySelector('[data-troll-output]');
 			const message = box.querySelector('[data-troll-message]');
 			const progress = box.querySelector('[data-troll-progress]');
 			const warning = box.querySelector('[data-stop-warning]');
+			const chaosZone = box.querySelector('[data-chaos-zone]');
 			const buttonPressCounts = new WeakMap();
 			const closeJokes = [
 				'Nice try, browser. This tab lives to click another day.',
@@ -152,12 +608,12 @@
 			let previousCloseJokeIndex = -1;
 			let closeWarningTimer;
 			let closeAttemptCount = 0;
-			box.addEventListener('click', (event) => {
+			chaosZone.addEventListener('click', (event) => {
 				const button = event.target.closest('button');
-				if (!button || button.matches('[data-troll-background]')) return;
+				if (!button || !button.matches('[data-close-trap]')) return;
 				const buttonPressCount = (buttonPressCounts.get(button) || 0) + 1;
 				buttonPressCounts.set(button, buttonPressCount);
-				if (buttonPressCount >= 6) {
+				if (buttonPressCount >= 1) {
 					closeAttemptCount += 1;
 					let jokeIndex;
 					do {
@@ -166,15 +622,11 @@
 					previousCloseJokeIndex = jokeIndex;
 
 					if (closeAttemptCount < warningThreshold) {
-						warning.textContent = `Warning: close attempt ${closeAttemptCount}/${warningThreshold}. The tab will only close after ${warningThreshold - closeAttemptCount} more warning cycles.`;
+						warning.textContent = `Warning: close attempt ${closeAttemptCount}/${warningThreshold}. The chaos is contained to this site.`;
 					} else if (closeAttemptCount < closeThreshold) {
-						warning.textContent = `Final warning: ${closeThreshold - closeAttemptCount} close attempts left before shutdown.`;
+						warning.textContent = `Final warning: ${closeThreshold - closeAttemptCount} close attempts left before the page politely refuses to cooperate.`;
 					} else {
-						warning.textContent = 'This tab is closing now. You were warned five times, then five more times.';
-						window.close();
-						if (!window.closed) {
-							warning.textContent = closeJokes[jokeIndex];
-						}
+						warning.textContent = 'The browser is not being closed. The chaos stays inside the website, where it belongs.';
 					}
 					warning.hidden = false;
 					window.clearTimeout(closeWarningTimer);
@@ -188,6 +640,384 @@
 				output.hidden = false;
 				progress.hidden = true;
 			};
+
+			const arcadeModes = [
+				{ name: 'Math Dash', kind: 'math', description: 'Solve the equation before the numbers escape.' },
+				{ name: 'Word Scramble', kind: 'word', description: 'Pick the word hiding inside the scrambled letters.' },
+				{ name: 'Memory Echo', kind: 'memory', description: 'Watch the sequence, then repeat it in order.' },
+				{ name: 'Number Hunt', kind: 'number', description: 'Find the exact number in the lineup.' },
+				{ name: 'Odd One Out', kind: 'odd', description: 'Spot the symbol that does not belong.' },
+				{ name: 'Color Match', kind: 'color', description: 'Choose the color named in the challenge.' },
+				{ name: 'Code Breaker', kind: 'code', description: 'Crack the secret three-digit code.' },
+				{ name: 'Higher or Lower', kind: 'higher', description: 'Predict whether the next number goes up or down.' },
+				{ name: 'Dice Duel', kind: 'dice', description: 'Call the die result before it rolls.' },
+				{ name: 'Target Tap', kind: 'target', description: 'Tap the exact target before it vanishes.' },
+				{ name: 'Emoji Riddle', kind: 'riddle', description: 'Match the clue to the right emoji.' },
+				{ name: 'Pattern Picker', kind: 'pattern', description: 'Work out what comes next in the pattern.' }
+			];
+			const arcadeVariants = ['Rookie', 'Speedy', 'Sneaky', 'Turbo', 'Cosmic', 'Jungle', 'Neon', 'Mystery', 'Mega', 'Legend'];
+			const arcadeGames = arcadeModes.flatMap((mode, modeIndex) => arcadeVariants.map((variant, level) => ({
+				...mode,
+				level: level + 1,
+				modeIndex,
+				name: `${mode.name}: ${variant}`
+			})));
+			const arcadeGrid = box.querySelector('[data-arcade-grid]');
+			const arcadeWords = ['planet', 'rocket', 'puzzle', 'button', 'garden', 'comet', 'pancake', 'tunnel', 'velvet', 'whisker'];
+			const arcadeColors = [
+				{ name: 'Red', value: '#db4c40' }, { name: 'Blue', value: '#3982c4' },
+				{ name: 'Green', value: '#39966a' }, { name: 'Yellow', value: '#edc843' },
+				{ name: 'Purple', value: '#8657ae' }, { name: 'Orange', value: '#e88b36' }
+			];
+			const arcadeRiddles = [
+				{ clue: 'I shine at night and change shape.', answer: '🌙' },
+				{ clue: 'I have a shell and move very slowly.', answer: '🐢' },
+				{ clue: 'I am a star-shaped snack from the sea.', answer: '⭐' },
+				{ clue: 'I fly at night and use echolocation.', answer: '🦇' },
+				{ clue: 'I am a fruit with a crown and spiky jacket.', answer: '🍍' },
+				{ clue: 'I am a tiny builder with eight legs.', answer: '🕷️' },
+				{ clue: 'I am cold, sweet, and often served in a cone.', answer: '🍦' },
+				{ clue: 'I carry my house on my back.', answer: '🐌' },
+				{ clue: 'I am a rocket ship for the ocean.', answer: '🐬' },
+				{ clue: 'I am a bright daytime star.', answer: '☀️' }
+			];
+			const arcadeShuffle = (items) => [...items].sort(() => Math.random() - 0.5);
+			const arcadePick = (items) => items[Math.floor(Math.random() * items.length)];
+			const makeArcadeButton = (label, answer, className = '') => {
+				const button = document.createElement('button');
+				button.type = 'button';
+				button.textContent = label;
+				button.dataset.arcadeAnswer = String(answer);
+				if (className) button.className = className;
+				return button;
+			};
+			const makeArcadeQuestion = (game) => {
+				const level = game.level;
+				let prompt;
+				let choices;
+				let answer;
+				switch (game.kind) {
+					case 'math': {
+						const left = Math.floor(Math.random() * (8 + level * 5)) + level;
+						const right = Math.floor(Math.random() * (6 + level * 3)) + 1;
+						const operation = level % 3 === 0 ? '×' : level % 2 === 0 ? '−' : '+';
+						answer = operation === '×' ? left * right : operation === '−' ? left + right : left + right;
+						prompt = `What is ${left} ${operation} ${right}?`;
+						if (operation === '−') answer = left - right;
+						break;
+					}
+					case 'word': {
+						const word = arcadeWords[(level - 1 + Math.floor(Math.random() * arcadeWords.length)) % arcadeWords.length];
+						let mixed = arcadeShuffle([...word]).join('');
+						if (mixed === word) mixed = `${mixed.slice(1)}${mixed[0]}`;
+						prompt = `Which word is hidden in “${mixed}”?`;
+						answer = word;
+						choices = arcadeShuffle([word, ...arcadeShuffle(arcadeWords.filter((item) => item !== word)).slice(0, 3)]);
+						break;
+					}
+					case 'number': {
+						answer = Math.floor(Math.random() * (40 + level * 12)) + 1;
+						prompt = `Find ${answer}.`;
+						choices = arcadeShuffle([answer, answer + 1, Math.max(1, answer - 2), answer + 3]);
+						break;
+					}
+					case 'odd': {
+						const symbols = ['🍋', '🍓', '🍇', '🍊', '🥝', '🍒'];
+						const group = arcadeShuffle(symbols).slice(0, 3);
+						const odd = symbols.find((symbol) => !group.includes(symbol));
+						choices = arcadeShuffle([group[0], group[0], group[0], odd]);
+						answer = odd;
+						prompt = 'Tap the one that is different.';
+						break;
+					}
+					case 'color': {
+						const color = arcadePick(arcadeColors);
+						answer = color.name;
+						prompt = `Pick ${color.name}.`;
+						choices = arcadeShuffle(arcadeColors).slice(0, 4);
+						if (!choices.some((item) => item.name === answer)) choices[0] = color;
+						choices = arcadeShuffle(choices);
+						break;
+					}
+					case 'code': {
+						answer = String(Math.floor(Math.random() * 900) + 100);
+						prompt = 'Choose the secret three-digit code.';
+						choices = arcadeShuffle([answer, ...Array.from({ length: 3 }, () => String(Math.floor(Math.random() * 900) + 100))]);
+						break;
+					}
+					case 'higher': {
+						const first = Math.floor(Math.random() * 90) + 5;
+						const second = Math.floor(Math.random() * 100) + 1;
+						prompt = `The number is ${first}. Is ${second} higher or lower?`;
+						answer = second > first ? 'Higher' : 'Lower';
+						choices = ['Higher', 'Lower'];
+						break;
+					}
+					case 'dice':
+						answer = String(Math.floor(Math.random() * 6) + 1);
+						prompt = 'Call the die result before the roll.';
+						choices = arcadeShuffle(['1', '2', '3', '4', '5', '6']);
+						break;
+					case 'target':
+						answer = String(Math.floor(Math.random() * 9) + 1);
+						prompt = `Quick! Tap target ${answer}.`;
+						choices = arcadeShuffle(['1', '2', '3', '4', '5', '6', '7', '8', '9']);
+						break;
+					case 'riddle': {
+						const riddle = arcadeRiddles[(level - 1 + Math.floor(Math.random() * arcadeRiddles.length)) % arcadeRiddles.length];
+						answer = riddle.answer;
+						prompt = riddle.clue;
+						choices = arcadeShuffle([answer, ...arcadeShuffle(arcadeRiddles.filter((item) => item.answer !== answer)).slice(0, 3).map((item) => item.answer)]);
+						break;
+					}
+					case 'pattern': {
+						const start = Math.floor(Math.random() * 12) + 1;
+						const step = level + Math.floor(Math.random() * 4) + 1;
+						answer = start + step * 4;
+						prompt = `What comes next: ${start}, ${start + step}, ${start + step * 2}, ${start + step * 3}, ...?`;
+						choices = arcadeShuffle([answer, answer + step, answer - 1, answer + 2]);
+						break;
+					}
+					case 'memory': {
+						const symbols = ['🔴', '🔵', '🟢', '🟡'];
+						const sequence = Array.from({ length: Math.min(3 + Math.floor(level / 2), 8) }, () => arcadePick(symbols));
+						return { prompt: `Memorize: ${sequence.join(' ')}`, sequence, choices: symbols };
+					}
+				}
+				return { prompt, answer: String(answer), choices };
+			};
+			const createArcadeCard = (game) => {
+				const card = document.createElement('article');
+				card.className = 'mini-game arcade-card';
+				card.dataset.arcadeName = `${game.name} ${game.description}`.toLowerCase();
+				const title = document.createElement('h3');
+				title.textContent = game.name;
+				const description = document.createElement('p');
+				description.textContent = `${game.description} Level ${game.level} of 10.`;
+				const prompt = document.createElement('p');
+				prompt.className = 'arcade-prompt';
+				prompt.setAttribute('aria-live', 'polite');
+				prompt.textContent = 'Ready for a round?';
+				const controls = document.createElement('div');
+				controls.className = 'arcade-controls';
+				const playButton = document.createElement('button');
+				playButton.type = 'button';
+				playButton.textContent = 'Play';
+				controls.append(playButton);
+				card.append(title, description, prompt, controls);
+				let round = null;
+				let wins = 0;
+				const beginRound = () => {
+					round = makeArcadeQuestion(game);
+					prompt.textContent = round.prompt;
+					controls.replaceChildren();
+					if (round.sequence) {
+						let sequenceIndex = 0;
+						const sequence = round.sequence;
+						window.setTimeout(() => {
+							prompt.textContent = `Repeat the ${sequence.length}-color sequence.`;
+						}, 1800);
+						for (const symbol of round.choices) {
+							const button = makeArcadeButton(symbol, symbol);
+							button.disabled = true;
+							button.addEventListener('click', () => {
+								if (symbol !== sequence[sequenceIndex]) {
+									prompt.textContent = `Not quite. The sequence was ${sequence.join(' ')}. Try another round!`;
+									controls.append(makeArcadeButton('Play again', 'again'));
+									return;
+								}
+								sequenceIndex += 1;
+								if (sequenceIndex === sequence.length) {
+									wins += 1;
+									prompt.textContent = `Perfect memory! Score: ${wins}.`;
+									controls.append(makeArcadeButton('Play again', 'again'));
+								} else {
+									prompt.textContent = `${sequenceIndex} of ${sequence.length} correct.`;
+								}
+							});
+							controls.append(button);
+						}
+						window.setTimeout(() => controls.querySelectorAll('button').forEach((button) => { button.disabled = false; }), 1800);
+						return;
+					}
+					for (const choice of round.choices) {
+						const isColor = game.kind === 'color';
+						const label = isColor ? choice.name : String(choice);
+						const button = makeArcadeButton(label, isColor ? choice.name : choice);
+						if (isColor) {
+							button.style.backgroundColor = choice.value;
+							button.setAttribute('aria-label', choice.name);
+						}
+						button.addEventListener('click', () => {
+							if (button.dataset.arcadeAnswer === round.answer) {
+								wins += 1;
+								prompt.textContent = `Correct! Score: ${wins}.`;
+							} else {
+								prompt.textContent = `Not that one! Answer: ${round.answer}. Score: ${wins}.`;
+							}
+							controls.replaceChildren(makeArcadeButton('Play again', 'again'));
+						});
+						controls.append(button);
+					}
+				};
+				playButton.addEventListener('click', beginRound);
+				controls.addEventListener('click', (event) => {
+					if (event.target.dataset.arcadeAnswer === 'again') beginRound();
+				});
+				return card;
+			};
+			arcadeGrid.replaceChildren(...arcadeGames.map(createArcadeCard));
+			const gameCatalog = [
+				{ name: 'Playground', keywords: ['playground', 'play ground', 'games', 'game', 'buttons'] },
+				{ name: 'Reaction Test', keywords: ['reaction', 'speed', 'click', 'green'] },
+				{ name: 'Guess the Number', keywords: ['guess', 'number', 'math', 'random'] },
+				{ name: 'Color Lab', keywords: ['color', 'paint', 'hue', 'design'] },
+				{ name: 'Lucky 7 Duel', keywords: ['lucky', '7', 'dice', 'roll'] },
+				{ name: 'Word Mixer', keywords: ['word', 'letters', 'mix', 'mystery'] },
+				{ name: 'Mood Spinner', keywords: ['mood', 'feeling', 'spin', 'vibes'] },
+				{ name: 'Counter', keywords: ['counter', 'boop', 'count'] },
+				...arcadeGames.map((game) => ({ name: game.name, keywords: [game.name.toLowerCase(), game.kind, 'arcade'] }))
+			];
+			const gameSearchInput = box.querySelector('[data-game-search]');
+			const gameSearchResults = box.querySelector('[data-game-search-results]');
+			const playgroundSection = box.querySelector('.playground');
+			const renderGameSearchResults = () => {
+				const query = gameSearchInput.value.trim().toLowerCase();
+				const showAllArcadeGames = !query || ['game', 'games', 'arcade', 'playground', 'play ground'].includes(query);
+				const visibleGames = query
+					? gameCatalog.filter((game) => game.keywords.some((keyword) => keyword.includes(query) || query.includes(keyword)))
+					: gameCatalog.slice(0, 5);
+				gameSearchResults.replaceChildren();
+				if (visibleGames.length === 0) {
+					const empty = document.createElement('span');
+					empty.className = 'game-search-chip';
+					empty.textContent = 'No matching games found';
+					gameSearchResults.append(empty);
+					playgroundSection.hidden = true;
+					return;
+				}
+				for (const game of visibleGames) {
+					const chip = document.createElement('span');
+					chip.className = 'game-search-chip';
+					chip.textContent = game.name;
+					gameSearchResults.append(chip);
+				}
+				for (const card of arcadeGrid.querySelectorAll('.arcade-card')) {
+					card.hidden = !showAllArcadeGames && !card.dataset.arcadeName.includes(query);
+				}
+				const shouldShowPlayground = !!query && visibleGames.some((game) => game.name.toLowerCase() === 'playground' || game.keywords.some((keyword) => keyword.includes(query) || query.includes(keyword)));
+				playgroundSection.hidden = !shouldShowPlayground;
+			};
+			gameSearchInput.addEventListener('input', renderGameSearchResults);
+			playgroundSection.hidden = true;
+			renderGameSearchResults();
+
+			const readSavedData = (key, fallback) => {
+				try {
+					const saved = window.localStorage.getItem(key);
+					return saved ? JSON.parse(saved) : fallback;
+				} catch {
+					return fallback;
+				}
+			};
+			const saveData = (key, value) => {
+				try {
+					window.localStorage.setItem(key, JSON.stringify(value));
+					return true;
+				} catch {
+					return false;
+				}
+			};
+
+			const pollLabels = {
+				'more-games': 'More mini-games',
+				'sound-effects': 'Silly sound effects',
+				'secret-buttons': 'Secret buttons'
+			};
+			const pollForm = box.querySelector('[data-viewer-poll]');
+			const pollResults = box.querySelector('[data-poll-results]');
+			const pollMessage = box.querySelector('[data-poll-message]');
+			const savedVotes = readSavedData('buttonBureauVotes', {});
+			const pollVotes = Object.fromEntries(Object.keys(pollLabels).map((choice) => [
+				choice,
+				Number.isFinite(savedVotes[choice]) ? Math.max(0, savedVotes[choice]) : 0
+			]));
+			let previousVote = readSavedData('buttonBureauMyVote', null);
+			if (!Object.hasOwn(pollLabels, previousVote)) previousVote = null;
+			const renderPollResults = () => {
+				const totalVotes = Object.values(pollVotes).reduce((total, votes) => total + votes, 0);
+				pollResults.replaceChildren();
+				for (const [choice, label] of Object.entries(pollLabels)) {
+					const resultLabel = document.createElement('p');
+					resultLabel.textContent = `${label}: ${pollVotes[choice]} ${pollVotes[choice] === 1 ? 'vote' : 'votes'}`;
+					const resultBar = document.createElement('progress');
+					resultBar.max = Math.max(totalVotes, 1);
+					resultBar.value = pollVotes[choice];
+					resultBar.setAttribute('aria-label', `${label} votes`);
+					pollResults.append(resultLabel, resultBar);
+				}
+			};
+			if (previousVote) {
+				pollForm.elements.feature.value = previousVote;
+				pollMessage.textContent = 'Your vote is saved on this device. You can change it any time.';
+			}
+			renderPollResults();
+			pollForm.addEventListener('submit', (event) => {
+				event.preventDefault();
+				const selectedVote = new FormData(pollForm).get('feature');
+				if (!Object.hasOwn(pollLabels, selectedVote)) return;
+				if (previousVote !== selectedVote) {
+					if (previousVote) pollVotes[previousVote] = Math.max(0, pollVotes[previousVote] - 1);
+					pollVotes[selectedVote] += 1;
+					previousVote = selectedVote;
+				}
+				const votesSaved = saveData('buttonBureauVotes', pollVotes);
+				const choiceSaved = saveData('buttonBureauMyVote', previousVote);
+				pollMessage.textContent = votesSaved && choiceSaved
+					? 'Thanks for voting! Your vote is saved on this device.'
+					: 'Thanks for voting! Your vote will last for this visit only.';
+				renderPollResults();
+			});
+
+			const guestbookForm = box.querySelector('[data-guestbook-form]');
+			const guestbookList = box.querySelector('[data-guestbook-list]');
+			const guestbookMessage = box.querySelector('[data-guestbook-message]');
+			const savedEntries = readSavedData('buttonBureauGuestbook', []);
+			let guestbookEntries = Array.isArray(savedEntries)
+				? savedEntries.filter((entry) => entry && typeof entry.name === 'string' && typeof entry.note === 'string').slice(-8)
+				: [];
+			const renderGuestbook = () => {
+				guestbookList.replaceChildren();
+				if (guestbookEntries.length === 0) {
+					const emptyMessage = document.createElement('p');
+					emptyMessage.className = 'guestbook-entry';
+					emptyMessage.textContent = 'No notes yet. Be the first to sign!';
+					guestbookList.append(emptyMessage);
+					return;
+				}
+				for (const entry of guestbookEntries) {
+					const note = document.createElement('p');
+					note.className = 'guestbook-entry';
+					note.textContent = `${entry.name || 'Anonymous'}: ${entry.note}`;
+					guestbookList.append(note);
+				}
+			};
+			renderGuestbook();
+			guestbookForm.addEventListener('submit', (event) => {
+				event.preventDefault();
+				const formData = new FormData(guestbookForm);
+				const name = String(formData.get('name') || '').trim().slice(0, 24) || 'Anonymous';
+				const note = String(formData.get('note') || '').trim().slice(0, 120);
+				if (!note) return;
+				guestbookEntries.push({ name, note });
+				guestbookEntries = guestbookEntries.slice(-8);
+				const entrySaved = saveData('buttonBureauGuestbook', guestbookEntries);
+				guestbookForm.reset();
+				renderGuestbook();
+				guestbookMessage.textContent = entrySaved
+					? 'Thanks for signing! Your note is saved on this device.'
+					: 'Thanks for signing! Your note will last for this visit only.';
+			});
 
 			box.querySelector('[data-troll-surprise]').addEventListener('click', () => {
 				showMessage('Surprise! You have been officially declared a champion of clicking buttons.');
@@ -243,6 +1073,254 @@
 			box.querySelector('[data-troll-fortune]').addEventListener('click', () => {
 				const fortune = fortunes[Math.floor(Math.random() * fortunes.length)];
 				showMessage(`Your very important fortune: ${fortune}`);
+			});
+
+			const pickRandom = (items) => items[Math.floor(Math.random() * items.length)];
+			const quickResults = {
+				'[data-troll-coin]': ['Heads. The coin has excellent posture.', 'Tails. The coin requests a recount.', 'It landed on the edge. Physics is taking a short break.'],
+				'[data-troll-dice]': ['1. A bold minimalist choice.', '2. Two whole dots. Incredible.', '3. A respectable triangle of dots.', '4. Four dots, arranged with purpose.', '5. Five dots. The die is showing off.', '6. Maximum dots. Please remain calm.'],
+				'[data-troll-eight-ball]': ['The answer is probably yes. Ask again after a snack.', 'Outlook hazy. The eight ball is facing the wall.', 'Signs point to maybe. Very official.', 'Absolutely. The tiny committee has voted.', 'Do not count on it. The eight ball is just being dramatic.', 'Reply unclear. Try turning the question upside down.'],
+				'[data-troll-joke]': ['Why did the button go to therapy? It had too many unresolved clicks.', 'I tried to write a joke about a browser tab, but it kept opening new windows.', 'What is a computer’s favorite snack? Microchips.', 'Why was the website so calm? It had a good cache.', 'I asked my keyboard for advice. It said, "Press on."'],
+				'[data-troll-compliment]': ['You have excellent button-pressing instincts.', 'Your curiosity is doing a great job today.', 'You make this corner of the internet more fun.', 'Your presence has been rated five out of five stars by this page.', 'You deserve a tiny victory lap.'],
+				'[data-troll-challenge]': ['Stretch your shoulders for ten seconds.', 'Think of a silly name for a houseplant.', 'Take one slow breath. Official challenge complete.', 'Find the nearest object that is your favorite color.', 'Invent a new holiday in five seconds.', 'Give yourself credit for finishing one small thing today.']
+			};
+			for (const [selector, results] of Object.entries(quickResults)) {
+				box.querySelector(selector).addEventListener('click', () => showMessage(pickRandom(results)));
+			}
+			const bandAdjectives = ['Electric', 'Sleepy', 'Invisible', 'Mysterious', 'Tiny', 'Lunar', 'Polite'];
+			const bandNouns = ['Turnips', 'Elevators', 'Clouds', 'Pigeons', 'Satellites', 'Muffins', 'Bookmarks'];
+			box.querySelector('[data-troll-band]').addEventListener('click', () => {
+				showMessage(`Your new band is called ${pickRandom(bandAdjectives)} ${pickRandom(bandNouns)}.`);
+			});
+
+			const luckyMessage = box.querySelector('[data-lucky-message]');
+			box.querySelector('[data-lucky-roll]').addEventListener('click', () => {
+				const firstDie = Math.floor(Math.random() * 6) + 1;
+				const secondDie = Math.floor(Math.random() * 6) + 1;
+				const total = firstDie + secondDie;
+				const outcome = total === 7 ? 'You hit 7. The dice salute you.' : `Total is ${total}. Close, but not 7.`;
+				luckyMessage.textContent = `${outcome} Dice roll: ${firstDie} + ${secondDie}.`;
+			});
+
+			const wordMessage = box.querySelector('[data-word-message]');
+			const wordMixerWords = ['planet', 'rocket', 'pancake', 'scooter', 'whisker', 'marshmallow'];
+			box.querySelector('[data-word-mix]').addEventListener('click', () => {
+				const word = pickRandom(wordMixerWords);
+				const mixed = [...word].sort(() => Math.random() - 0.5).join('');
+				wordMessage.textContent = `Mixed word: ${mixed}. The original was probably ${word}.`;
+			});
+
+			const moodMessage = box.querySelector('[data-mood-message]');
+			const moods = ['dramatic', 'snack-powered', 'mischievous', 'suspiciously calm', 'heroic', 'slightly sleepy'];
+			box.querySelector('[data-mood-spin]').addEventListener('click', () => {
+				moodMessage.textContent = `Current bureau mood: ${pickRandom(moods)}.`;
+			});
+
+			let boopCount = 0;
+			const counterValue = box.querySelector('[data-counter-value]');
+			box.querySelector('[data-counter-add]').addEventListener('click', () => {
+				boopCount += 1;
+				counterValue.textContent = boopCount;
+			});
+			box.querySelector('[data-counter-reset]').addEventListener('click', () => {
+				boopCount = 0;
+				counterValue.textContent = boopCount;
+			});
+
+			const reactionButton = box.querySelector('[data-reaction-start]');
+			const reactionMessage = box.querySelector('[data-reaction-message]');
+			let reactionState = 'idle';
+			let reactionTimer;
+			let reactionReadyAt = 0;
+			reactionButton.addEventListener('click', () => {
+				if (reactionState === 'idle') {
+					reactionState = 'waiting';
+					reactionMessage.textContent = 'Wait for it...';
+					reactionButton.textContent = 'Wait for green...';
+					reactionTimer = window.setTimeout(() => {
+						reactionState = 'ready';
+						reactionReadyAt = performance.now();
+						reactionMessage.textContent = 'GREEN! Click as fast as you can!';
+						reactionButton.textContent = 'CLICK NOW';
+					}, 1300 + Math.random() * 2700);
+				} else if (reactionState === 'waiting') {
+					window.clearTimeout(reactionTimer);
+					reactionState = 'idle';
+					reactionMessage.textContent = 'Too soon! Try again when the signal changes.';
+					reactionButton.textContent = 'Start reaction test';
+				} else {
+					const reactionTime = Math.round(performance.now() - reactionReadyAt);
+					reactionState = 'idle';
+					reactionMessage.textContent = `${reactionTime} ms. ${reactionTime < 250 ? 'Lightning fast!' : 'The button respects your timing.'}`;
+					reactionButton.textContent = 'Try again';
+				}
+			});
+
+			const guessForm = box.querySelector('[data-guess-form]');
+			const guessInput = box.querySelector('#guess-input');
+			const guessMessage = box.querySelector('[data-guess-message]');
+			let secretNumber = Math.floor(Math.random() * 20) + 1;
+			let guessCount = 0;
+			let guessSolved = false;
+			guessForm.addEventListener('submit', (event) => {
+				event.preventDefault();
+				if (guessSolved) {
+					guessMessage.textContent = 'You already got it. Start a new number to play again!';
+					return;
+				}
+				const guess = Number(guessInput.value);
+				guessCount += 1;
+				if (guess === secretNumber) {
+					guessSolved = true;
+					guessMessage.textContent = `Correct! You got it in ${guessCount} ${guessCount === 1 ? 'guess' : 'guesses'}.`;
+				} else {
+					guessMessage.textContent = `${guess < secretNumber ? 'Higher' : 'Lower'}! Guesses so far: ${guessCount}.`;
+				}
+			});
+			box.querySelector('[data-guess-new]').addEventListener('click', () => {
+				secretNumber = Math.floor(Math.random() * 20) + 1;
+				guessCount = 0;
+				guessSolved = false;
+				guessInput.value = '';
+				guessMessage.textContent = "I'm thinking of a number from 1 to 20.";
+				guessInput.focus();
+			});
+
+			const colorPreview = box.querySelector('[data-color-preview]');
+			box.querySelector('[data-color-change]').addEventListener('click', () => {
+				const hue = Math.floor(Math.random() * 360);
+				document.body.style.background = `radial-gradient(circle at 12% 18%, hsl(${hue} 65% 92%) 0, transparent 28rem), hsl(${hue} 35% 84%)`;
+				colorPreview.style.backgroundColor = `hsl(${hue} 50% 75%)`;
+				colorPreview.textContent = `Freshly mixed hue: ${hue} degrees`;
+			});
+			box.querySelector('[data-color-reset]').addEventListener('click', () => {
+				document.body.style.background = '';
+				colorPreview.style.backgroundColor = '';
+				colorPreview.textContent = 'Original bureau colors';
+			});
+
+			const memorySymbols = ['🌼', '🦊', '🚀', '🍕', '🌙', '☀️'];
+			const memoryGrid = box.querySelector('[data-memory-grid]');
+			const memoryMessage = box.querySelector('[data-memory-message]');
+			const memoryTiles = [...memoryGrid.querySelectorAll('[data-memory-tile]')];
+			let memoryState = { opened: [], matched: 0, locked: false, emojiMap: [] };
+			const shuffleMemory = () => {
+				const symbols = [...memorySymbols, ...memorySymbols].sort(() => Math.random() - 0.5);
+				memoryState = { opened: [], matched: 0, locked: false, emojiMap: symbols };
+				memoryTiles.forEach((tile, index) => {
+					tile.textContent = '?';
+					tile.disabled = false;
+					tile.dataset.value = symbols[index];
+				});
+				memoryMessage.textContent = 'Find all the matching emoji pairs.';
+			};
+			const handleMemoryFlip = (event) => {
+				const tile = event.currentTarget;
+				if (memoryState.locked || tile.textContent !== '?' || memoryState.opened.includes(tile)) return;
+				tile.textContent = tile.dataset.value;
+				memoryState.opened.push(tile);
+				if (memoryState.opened.length === 2) {
+					memoryState.locked = true;
+					const [first, second] = memoryState.opened;
+					if (first.dataset.value === second.dataset.value) {
+						memoryState.matched += 1;
+						memoryMessage.textContent = 'Nice match! The emoji gods approve.';
+						memoryState.opened = [];
+						memoryState.locked = false;
+						if (memoryState.matched === memorySymbols.length) {
+							memoryMessage.textContent = 'You matched them all. Bureau champion unlocked.';
+						}
+					} else {
+						memoryMessage.textContent = 'Not a match. Read the room and try again.';
+						window.setTimeout(() => {
+							first.textContent = '?';
+							second.textContent = '?';
+							memoryState.opened = [];
+							memoryState.locked = false;
+						}, 600);
+					}
+				}
+			};
+			memoryTiles.forEach((tile) => tile.addEventListener('click', handleMemoryFlip));
+			box.querySelector('[data-memory-reset]').addEventListener('click', shuffleMemory);
+			shuffleMemory();
+
+			const tttGrid = box.querySelector('[data-ttt-grid]');
+			const tttMessage = box.querySelector('[data-ttt-message]');
+			const tttCells = [...tttGrid.querySelectorAll('[data-ttt-cell]')];
+			let tttBoard = Array(9).fill('');
+			let tttTurn = 'X';
+			let tttGameOver = false;
+			const winningLines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+			const updateTttBoard = () => {
+				tttCells.forEach((cell) => {
+					cell.textContent = tttBoard[Number(cell.dataset.tttCell)] || ' ';
+				});
+			};
+			const checkTttWinner = () => {
+				for (const [a,b,c] of winningLines) {
+					if (tttBoard[a] && tttBoard[a] === tttBoard[b] && tttBoard[a] === tttBoard[c]) {
+						return tttBoard[a];
+					}
+				}
+				return null;
+			};
+			const resetTtt = () => {
+				tttBoard = Array(9).fill('');
+				tttTurn = 'X';
+				tttGameOver = false;
+				tttMessage.textContent = 'Player X starts. Try to line up three.';
+				updateTttBoard();
+			};
+			tttGrid.addEventListener('click', (event) => {
+				const cell = event.target.closest('[data-ttt-cell]');
+				if (!cell || tttGameOver) return;
+				const index = Number(cell.dataset.tttCell);
+				if (tttBoard[index]) return;
+				tttBoard[index] = tttTurn;
+				updateTttBoard();
+				const winner = checkTttWinner();
+				if (winner) {
+					tttMessage.textContent = `${winner} wins! The board has been emotionally damaged.`;
+					tttGameOver = true;
+					return;
+				}
+				if (tttBoard.every(Boolean)) {
+					tttMessage.textContent = 'Draw game. The grid remains suspiciously calm.';
+					tttGameOver = true;
+					return;
+				}
+				tttTurn = tttTurn === 'X' ? 'O' : 'X';
+				tttMessage.textContent = `Player ${tttTurn}'s turn.`;
+			});
+			box.querySelector('[data-ttt-reset]').addEventListener('click', resetTtt);
+			resetTtt();
+
+			const petStatus = box.querySelector('[data-pet-status]');
+			const petMessages = {
+				feed: 'Your pocket pet is now slightly less dramatic and much more snack-powered.',
+				play: 'Your pocket pet is delighted. It has performed a tiny victory dance.',
+				nap: 'Your pocket pet has entered a luxurious nap phase and is very pleased.'
+			};
+			box.querySelector('[data-pet-feed]').addEventListener('click', () => {
+				petStatus.textContent = petMessages.feed;
+			});
+			box.querySelector('[data-pet-play]').addEventListener('click', () => {
+				petStatus.textContent = petMessages.play;
+			});
+			box.querySelector('[data-pet-rest]').addEventListener('click', () => {
+				petStatus.textContent = petMessages.nap;
+			});
+
+			const storyOutput = box.querySelector('[data-story-output]');
+			const storyStarts = ['Once upon a time', 'In a forgotten corner of the office', 'During a very dramatic lunch break', 'Right before a suspiciously loud beep'];
+			const storyNouns = ['a tiny robot', 'a very serious pigeon', 'an overconfident toaster', 'a sleepy octopus', 'a button-powered dragon'];
+			const storyVerbs = ['stole the conference room', 'built a mansion in a shoebox', 'rescued a sandwich from doom', 'started a talent show of squirrels', 'tried to rename the internet'];
+			box.querySelector('[data-story-generate]').addEventListener('click', () => {
+				const start = storyStarts[Math.floor(Math.random() * storyStarts.length)];
+				const noun = storyNouns[Math.floor(Math.random() * storyNouns.length)];
+				const verb = storyVerbs[Math.floor(Math.random() * storyVerbs.length)];
+				storyOutput.textContent = `${start}, ${noun} ${verb}. The moral was: never trust a perfectly timed snack break.`;
 			});
 
 			const backgrounds = [
