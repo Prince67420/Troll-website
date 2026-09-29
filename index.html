@@ -168,63 +168,19 @@
 			font-size: 0.9rem;
 		}
 
-		.viewer-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
-			gap: 0.75rem;
-			text-align: left;
-		}
-
-		.poll-options {
-			display: grid;
-			gap: 0.5rem;
-			margin: 0 0 0.75rem;
+		.guestbook-embed {
+			display: block;
+			width: 100%;
+			height: 75rem;
 			border: 0;
-			padding: 0;
+			border-radius: 8px;
+			background: #fff;
 		}
 
-		.poll-results p {
-			margin: 0.6rem 0 0.2rem;
-		}
-
-		.poll-results progress {
-			display: block;
-			width: 100%;
-			accent-color: #176b55;
-		}
-
-		.guestbook-form label {
-			display: block;
-			margin-top: 0.6rem;
-		}
-
-		.guestbook-form input,
-		.guestbook-form textarea {
-			box-sizing: border-box;
-			width: 100%;
-			margin-top: 0.25rem;
-			border: 1px solid #789487;
-			border-radius: 6px;
-			padding: 0.55rem;
-			font: inherit;
-		}
-
-		.guestbook-form textarea {
-			min-height: 5rem;
-			resize: vertical;
-		}
-
-		.guestbook-list {
-			max-height: 12rem;
-			margin-top: 0.75rem;
-			overflow-y: auto;
-		}
-
-		.guestbook-entry {
-			margin: 0;
-			border-top: 1px solid #d5e0d9;
-			padding: 0.6rem 0;
-			overflow-wrap: anywhere;
+		@media (max-width: 36rem) {
+			.guestbook-embed {
+				height: 82rem;
+			}
 		}
 
 		.memory-grid,
@@ -537,40 +493,19 @@
 			<progress class="troll-progress" data-troll-progress max="100" value="0" aria-label="Status check progress" hidden></progress>
 		</div>
 		<section class="viewer-hub" aria-labelledby="viewer-hub-title">
-			<h2 id="viewer-hub-title">Arcade Lounge</h2>
-			<p class="viewer-note">Cast a vote or leave a note. This page saves both only in this browser.</p>
-			<div class="viewer-grid">
-				<section class="mini-game" aria-labelledby="poll-title">
-					<h3 id="poll-title">What should we add next?</h3>
-					<form data-viewer-poll>
-						<fieldset class="poll-options">
-							<legend class="visually-hidden">Choose a future feature</legend>
-							<label><input type="radio" name="feature" value="more-games" required> More mini-games</label>
-							<label><input type="radio" name="feature" value="sound-effects"> Silly sound effects</label>
-							<label><input type="radio" name="feature" value="secret-buttons"> Secret buttons</label>
-						</fieldset>
-						<button type="submit">Cast my vote</button>
-					</form>
-					<div class="poll-results" data-poll-results aria-live="polite"></div>
-					<p class="viewer-note" data-poll-message></p>
-				</section>
-				<section class="mini-game" aria-labelledby="guestbook-title">
-					<h3 id="guestbook-title">Bureau Guestbook</h3>
-					<form class="guestbook-form" data-guestbook-form>
-						<label for="guestbook-name">Name or nickname</label>
-						<input id="guestbook-name" name="name" maxlength="24" placeholder="Optional">
-						<label for="guestbook-note">Leave a short note</label>
-						<textarea id="guestbook-note" name="note" maxlength="120" required></textarea>
-						<button type="submit">Sign the guestbook</button>
-					</form>
-					<div class="guestbook-list" data-guestbook-list aria-live="polite"></div>
-					<p class="viewer-note" data-guestbook-message></p>
-				</section>
-			</div>
+			<h2 id="viewer-hub-title">Send feedback</h2>
+			<p class="viewer-note">Your response goes directly to the site owner's Google Forms account.</p>
+			<iframe
+				class="guestbook-embed"
+				title="Bureau Guestbook Google Form"
+				src="https://docs.google.com/forms/d/e/1FAIpQLSdl8gyqNCfgZBITvFaxucHEQuI4NHU-Ra43rFn57blIrSGezw/viewform?embedded=true"
+				loading="eager">
+				<p>Your browser cannot display the embedded form. <a href="https://docs.google.com/forms/d/e/1FAIpQLSdl8gyqNCfgZBITvFaxucHEQuI4NHU-Ra43rFn57blIrSGezw/viewform">Open the guestbook form</a>.</p>
+			</iframe>
+			<p class="viewer-note"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdl8gyqNCfgZBITvFaxucHEQuI4NHU-Ra43rFn57blIrSGezw/viewform" target="_blank" rel="noopener noreferrer">Open the form directly</a></p>
 		</section>
 		<footer class="site-footer">
 			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer" data-rickroll-trigger>Leave website</a>
-			<p>For feedback, feel free to contact me at <a href="mailto:brownca@think-usa.org">brownca@think-usa.org</a>.</p>
 		</footer>
 	</main>
 	<dialog class="rickroll-screen" data-rickroll-dialog aria-labelledby="rickroll-title">
@@ -911,113 +846,6 @@
 			gameSearchInput.addEventListener('input', renderGameSearchResults);
 			playgroundSection.hidden = true;
 			renderGameSearchResults();
-
-			const readSavedData = (key, fallback) => {
-				try {
-					const saved = window.localStorage.getItem(key);
-					return saved ? JSON.parse(saved) : fallback;
-				} catch {
-					return fallback;
-				}
-			};
-			const saveData = (key, value) => {
-				try {
-					window.localStorage.setItem(key, JSON.stringify(value));
-					return true;
-				} catch {
-					return false;
-				}
-			};
-
-			const pollLabels = {
-				'more-games': 'More mini-games',
-				'sound-effects': 'Silly sound effects',
-				'secret-buttons': 'Secret buttons'
-			};
-			const pollForm = box.querySelector('[data-viewer-poll]');
-			const pollResults = box.querySelector('[data-poll-results]');
-			const pollMessage = box.querySelector('[data-poll-message]');
-			const savedVotes = readSavedData('buttonBureauVotes', {});
-			const pollVotes = Object.fromEntries(Object.keys(pollLabels).map((choice) => [
-				choice,
-				Number.isFinite(savedVotes[choice]) ? Math.max(0, savedVotes[choice]) : 0
-			]));
-			let previousVote = readSavedData('buttonBureauMyVote', null);
-			if (!Object.hasOwn(pollLabels, previousVote)) previousVote = null;
-			const renderPollResults = () => {
-				const totalVotes = Object.values(pollVotes).reduce((total, votes) => total + votes, 0);
-				pollResults.replaceChildren();
-				for (const [choice, label] of Object.entries(pollLabels)) {
-					const resultLabel = document.createElement('p');
-					resultLabel.textContent = `${label}: ${pollVotes[choice]} ${pollVotes[choice] === 1 ? 'vote' : 'votes'}`;
-					const resultBar = document.createElement('progress');
-					resultBar.max = Math.max(totalVotes, 1);
-					resultBar.value = pollVotes[choice];
-					resultBar.setAttribute('aria-label', `${label} votes`);
-					pollResults.append(resultLabel, resultBar);
-				}
-			};
-			if (previousVote) {
-				pollForm.elements.feature.value = previousVote;
-				pollMessage.textContent = 'Your vote is saved on this device. You can change it any time.';
-			}
-			renderPollResults();
-			pollForm.addEventListener('submit', (event) => {
-				event.preventDefault();
-				const selectedVote = new FormData(pollForm).get('feature');
-				if (!Object.hasOwn(pollLabels, selectedVote)) return;
-				if (previousVote !== selectedVote) {
-					if (previousVote) pollVotes[previousVote] = Math.max(0, pollVotes[previousVote] - 1);
-					pollVotes[selectedVote] += 1;
-					previousVote = selectedVote;
-				}
-				const votesSaved = saveData('buttonBureauVotes', pollVotes);
-				const choiceSaved = saveData('buttonBureauMyVote', previousVote);
-				pollMessage.textContent = votesSaved && choiceSaved
-					? 'Thanks for voting! Your vote is saved on this device.'
-					: 'Thanks for voting! Your vote will last for this visit only.';
-				renderPollResults();
-			});
-
-			const guestbookForm = box.querySelector('[data-guestbook-form]');
-			const guestbookList = box.querySelector('[data-guestbook-list]');
-			const guestbookMessage = box.querySelector('[data-guestbook-message]');
-			const savedEntries = readSavedData('buttonBureauGuestbook', []);
-			let guestbookEntries = Array.isArray(savedEntries)
-				? savedEntries.filter((entry) => entry && typeof entry.name === 'string' && typeof entry.note === 'string').slice(-8)
-				: [];
-			const renderGuestbook = () => {
-				guestbookList.replaceChildren();
-				if (guestbookEntries.length === 0) {
-					const emptyMessage = document.createElement('p');
-					emptyMessage.className = 'guestbook-entry';
-					emptyMessage.textContent = 'No notes yet. Be the first to sign!';
-					guestbookList.append(emptyMessage);
-					return;
-				}
-				for (const entry of guestbookEntries) {
-					const note = document.createElement('p');
-					note.className = 'guestbook-entry';
-					note.textContent = `${entry.name || 'Anonymous'}: ${entry.note}`;
-					guestbookList.append(note);
-				}
-			};
-			renderGuestbook();
-			guestbookForm.addEventListener('submit', (event) => {
-				event.preventDefault();
-				const formData = new FormData(guestbookForm);
-				const name = String(formData.get('name') || '').trim().slice(0, 24) || 'Anonymous';
-				const note = String(formData.get('note') || '').trim().slice(0, 120);
-				if (!note) return;
-				guestbookEntries.push({ name, note });
-				guestbookEntries = guestbookEntries.slice(-8);
-				const entrySaved = saveData('buttonBureauGuestbook', guestbookEntries);
-				guestbookForm.reset();
-				renderGuestbook();
-				guestbookMessage.textContent = entrySaved
-					? 'Thanks for signing! Your note is saved on this device.'
-					: 'Thanks for signing! Your note will last for this visit only.';
-			});
 
 			box.querySelector('[data-troll-surprise]').addEventListener('click', () => {
 				showMessage('Surprise! You have been officially declared a champion of clicking buttons.');
