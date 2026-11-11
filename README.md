@@ -1,2 +1,1 @@
-# Troll-website
-Troll? troll!
+#School-website
