@@ -3,854 +3,766 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Unionville-Sebewaing Area School District - Home of the Patriots" />
+    <meta name="description" content="Discover learning, enrollment, and community resources at Unionville-Sebewaing Area School District, Home of the Patriots." />
+    <meta name="theme-color" content="#0b2c4b" />
     <title>Unionville-Sebewaing Area School District | Home of the Patriots</title>
     <style>
       :root {
-        --navy: #0d3d72;
-        --navy-deep: #0a2e55;
-        --navy-soft: #113f72;
-        --red: #c5473a;
-        --red-dark: #a83327;
-        --gold: #e7bb60;
-        --gold-soft: #f5d289;
-        --sand: #f6f1e9;
-        --cream: #f7f9fc;
-        --paper: #ffffff;
-        --text: #152330;
-        --muted: #586a7f;
-        --line: #dfe6ee;
-        --shadow: 0 20px 50px rgba(10, 46, 85, 0.12);
-        --shadow-soft: 0 12px 36px rgba(10, 46, 85, 0.08);
+        color-scheme: light;
+        --navy: #123f69;
+        --navy-deep: #0b2c4b;
+        --navy-dark: #08243f;
+        --red: #b83c32;
+        --red-dark: #972e27;
+        --gold: #e4b85e;
+        --cream: #f5f1e9;
+        --paper: #fff;
+        --ink: #172433;
+        --muted: #59697a;
+        --line: #e0e6ec;
+        --shadow: 0 22px 60px rgba(8, 36, 63, 0.14);
         --radius: 22px;
       }
 
-      * { box-sizing: border-box; }
-      html { scroll-behavior: smooth; }
+      *, *::before, *::after { box-sizing: border-box; }
+      html { scroll-behavior: smooth; scroll-padding-top: 110px; }
       body {
         margin: 0;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: #f5f8fb;
-        color: var(--text);
-        line-height: 1.68;
+        background: #f7f9fb;
+        color: var(--ink);
+        font-family: "Segoe UI", Arial, sans-serif;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
       }
       img { display: block; max-width: 100%; }
       a { color: inherit; }
-      p { margin: 0; }
-      h1, h2, h3 { margin: 0; }
-      .container {
-        width: min(1200px, calc(100% - 36px));
-        margin: 0 auto;
+      a:focus-visible, button:focus-visible {
+        outline: 3px solid var(--gold);
+        outline-offset: 4px;
       }
-
-      .topbar {
+      h1, h2, h3, p { margin-top: 0; }
+      .container { width: min(1200px, calc(100% - 40px)); margin-inline: auto; }
+      .skip-link {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        z-index: 100;
+        transform: translateY(-150%);
+        padding: 10px 14px;
+        border-radius: 8px;
+        color: #fff;
         background: var(--navy-deep);
-        color: rgba(255,255,255,0.92);
-        font-size: 0.74rem;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        font-weight: 800;
       }
-      .topbar-inner {
-        min-height: 42px;
+      .skip-link:focus { transform: translateY(0); }
+
+      .utility-bar {
+        color: rgba(255,255,255,.9);
+        background: var(--navy-dark);
+        font-size: .75rem;
+        font-weight: 700;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+      }
+      .utility-inner {
+        min-height: 38px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 16px;
+        gap: 20px;
       }
-      .topbar .right a {
-        color: var(--gold-soft);
-        text-decoration: none;
-        border-bottom: 1px solid transparent;
-      }
-      .topbar .right a:hover { border-color: var(--gold-soft); }
+      .utility-inner a { color: #f4d28d; text-decoration: none; }
+      .utility-inner a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
-      header {
+      .site-header {
         position: sticky;
         top: 0;
-        z-index: 50;
-        background: rgba(255,255,255,0.97);
-        border-bottom: 1px solid rgba(13, 61, 114, 0.08);
-        backdrop-filter: blur(10px);
+        z-index: 20;
+        background: rgba(255,255,255,.97);
+        border-bottom: 1px solid rgba(8,36,63,.09);
+        backdrop-filter: blur(12px);
       }
       .header-inner {
-        min-height: 92px;
+        min-height: 86px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 24px;
+        gap: 28px;
       }
       .brand {
         display: inline-flex;
         align-items: center;
-        gap: 14px;
-        text-decoration: none;
+        gap: 13px;
+        flex: 0 1 auto;
         color: var(--navy-deep);
+        text-decoration: none;
       }
       .brand-mark {
-        width: 54px;
-        height: 54px;
         display: grid;
+        flex: 0 0 50px;
+        width: 50px;
+        height: 50px;
         place-items: center;
-        border-radius: 14px;
-        background: linear-gradient(135deg, var(--navy), var(--red));
+        border-radius: 14px 14px 14px 4px;
+        background: linear-gradient(145deg, var(--navy), var(--red));
+        box-shadow: 0 8px 20px rgba(8,36,63,.18);
         color: #fff;
-        font-size: 1.7rem;
-        font-weight: 900;
-        box-shadow: var(--shadow-soft);
-      }
-      .brand-text {
-        line-height: 1.08;
-        letter-spacing: -0.04em;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.65rem;
         font-weight: 800;
-        font-size: 1.04rem;
       }
-      .brand-text small {
+      .brand-name {
+        max-width: 290px;
+        font-size: .97rem;
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: -.025em;
+      }
+      .brand-name small {
         display: block;
         margin-top: 4px;
         color: var(--muted);
-        font-size: 0.68rem;
-        letter-spacing: 0.15em;
+        font-size: .65rem;
+        letter-spacing: .17em;
         text-transform: uppercase;
       }
-
-      nav {
+      .main-nav {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        gap: clamp(12px, 2vw, 28px);
-        flex-wrap: wrap;
+        gap: clamp(12px, 1.7vw, 23px);
       }
-      nav a {
-        color: var(--text);
+      .main-nav a {
+        color: #243343;
         text-decoration: none;
-        font-size: 0.92rem;
+        font-size: .86rem;
         font-weight: 700;
+        white-space: nowrap;
       }
-      nav a:hover { color: var(--red); }
-
-      .btn,
-      .btn-primary,
-      .btn-secondary {
+      .main-nav a:not(.button):hover { color: var(--red); }
+      .button {
         display: inline-flex;
+        min-height: 48px;
         align-items: center;
         justify-content: center;
-        min-height: 48px;
-        padding: 0 22px;
-        border-radius: 12px;
+        gap: 9px;
+        padding: 0 21px;
+        border: 1px solid transparent;
+        border-radius: 9px;
         text-decoration: none;
+        font-size: .92rem;
         font-weight: 800;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
       }
-      .btn-primary {
-        background: linear-gradient(135deg, var(--red), var(--red-dark));
+      .button:hover { transform: translateY(-2px); }
+      .button-primary {
+        background: var(--red);
+        box-shadow: 0 9px 22px rgba(184,60,50,.2);
+        color: #fff !important;
+      }
+      .button-primary:hover { background: var(--red-dark); box-shadow: 0 12px 26px rgba(184,60,50,.28); }
+      .button-outline {
+        border-color: rgba(255,255,255,.65);
         color: #fff;
-        box-shadow: 0 12px 28px rgba(197, 71, 58, 0.25);
+        background: rgba(255,255,255,.04);
       }
-      .btn-secondary {
-        background: var(--navy);
-        color: #fff;
-      }
-      .btn-primary:hover, .btn-secondary:hover { transform: translateY(-2px); }
+      .button-outline:hover { background: rgba(255,255,255,.12); }
 
       .hero {
-        background:
-          linear-gradient(120deg, rgba(255,255,255,0.82), rgba(246, 241, 233, 0.88)),
-          url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
-        padding: 90px 0 76px;
-      }
-      .hero-grid {
-        display: grid;
-        grid-template-columns: 1.08fr 0.92fr;
-        gap: 52px;
-        align-items: center;
-      }
-      .eyebrow {
-        color: var(--red);
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        font-size: 0.76rem;
-        font-weight: 900;
-        margin-bottom: 18px;
-      }
-      h1 {
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(2.9rem, 5vw, 5.3rem);
-        letter-spacing: -0.06em;
-        line-height: 0.96;
-        color: var(--navy-deep);
-        margin-bottom: 22px;
-      }
-      .hero-copy p {
-        color: var(--muted);
-        font-size: 1.12rem;
-        max-width: 560px;
-      }
-      .hero-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 30px;
-      }
-      .hero-panel {
-        background: rgba(255,255,255,0.86);
-        border: 1px solid rgba(13, 61, 114, 0.08);
-        border-radius: 30px;
-        padding: 24px;
-        box-shadow: var(--shadow);
-      }
-      .hero-card {
         position: relative;
         overflow: hidden;
-        height: 470px;
-        border-radius: 24px;
-        background: #ddeaf6;
-        border: 1px solid rgba(13, 61, 114, 0.08);
+        padding: 82px 0 88px;
+        color: #fff;
+        background: var(--navy-deep);
+        isolation: isolate;
       }
-      .hero-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .mini-badge {
+      .hero::before {
         position: absolute;
-        right: 18px;
-        bottom: 18px;
-        max-width: 190px;
-        background: rgba(255,255,255,0.96);
-        color: var(--navy-deep);
-        padding: 16px 18px;
-        border-radius: 16px;
-        font-weight: 800;
-        line-height: 1.4;
-        box-shadow: var(--shadow-soft);
+        z-index: -2;
+        inset: 0;
+        content: "";
+        background: url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=2000&q=85") center 48% / cover no-repeat;
       }
-      .mini-badge span {
-        display: block;
-        color: var(--muted);
-        font-size: 0.68rem;
-        letter-spacing: 0.12em;
+      .hero::after {
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        content: "";
+        background: linear-gradient(95deg, rgba(6,31,54,.96) 0%, rgba(9,43,73,.88) 45%, rgba(9,43,73,.30) 100%);
+      }
+      .hero-content { max-width: 760px; }
+      .hero .eyebrow, .section-kicker {
+        margin-bottom: 14px;
+        color: var(--gold);
+        font-size: .74rem;
+        font-weight: 800;
+        letter-spacing: .18em;
         text-transform: uppercase;
-        margin-bottom: 6px;
+      }
+      .hero h1 {
+        max-width: 760px;
+        margin-bottom: 20px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(3rem, 6vw, 5.7rem);
+        font-weight: 600;
+        letter-spacing: -.055em;
+        line-height: .98;
+        text-wrap: balance;
+      }
+      .hero-copy {
+        max-width: 620px;
+        margin-bottom: 28px;
+        color: rgba(255,255,255,.86);
+        font-size: clamp(1.02rem, 1.6vw, 1.17rem);
+      }
+      .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+      .hero-note {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 34px;
+        color: rgba(255,255,255,.8);
+        font-size: .83rem;
+        font-weight: 700;
+        letter-spacing: .04em;
+      }
+      .hero-note::before {
+        width: 28px;
+        height: 2px;
+        background: var(--gold);
+        content: "";
       }
 
-      .stats {
-        background: #fff;
-        border-bottom: 1px solid var(--line);
+      .values-strip {
+        position: relative;
+        z-index: 1;
+        margin-top: -28px;
       }
-      .stats-grid {
+      .values-grid {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0,1fr));
-        gap: 18px;
-        padding: 26px 0;
-      }
-      .stat {
-        background: var(--cream);
+        grid-template-columns: repeat(3, 1fr);
+        overflow: hidden;
         border: 1px solid var(--line);
-        border-radius: 18px;
-        text-align: center;
-        padding: 22px 18px;
+        border-radius: 15px;
+        background: #fff;
+        box-shadow: var(--shadow);
       }
-      .stat strong {
-        display: block;
-        color: var(--navy);
+      .value-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        min-height: 92px;
+        padding: 20px 26px;
+      }
+      .value-item + .value-item { border-left: 1px solid var(--line); }
+      .value-number {
+        color: var(--red);
         font-family: Georgia, "Times New Roman", serif;
-        font-size: 2.1rem;
-        line-height: 1.1;
-        letter-spacing: -0.05em;
+        font-size: 1.9rem;
+        line-height: 1;
       }
-      .stat span {
+      .value-item strong {
+        display: block;
+        color: var(--navy-deep);
+        font-size: .93rem;
+      }
+      .value-item span:last-child {
         display: block;
         color: var(--muted);
-        font-size: 0.76rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        font-weight: 800;
-        margin-top: 6px;
+        font-size: .78rem;
       }
 
       section { padding: 88px 0; }
-      .section-header {
-        width: min(730px, 100%);
-        margin: 0 auto 40px;
+      .section-heading {
+        max-width: 720px;
+        margin: 0 auto 42px;
         text-align: center;
       }
-      .section-header h2 {
-        font-family: Georgia, "Times New Roman", serif;
-        color: var(--navy-deep);
-        font-size: clamp(2.3rem, 3vw, 3.2rem);
-        line-height: 1.08;
-        letter-spacing: -0.05em;
+      .section-heading .section-kicker { color: var(--red); }
+      .section-heading h2,
+      .about-copy h2 {
         margin-bottom: 14px;
+        color: var(--navy-deep);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.2rem, 3.8vw, 3.35rem);
+        font-weight: 600;
+        letter-spacing: -.05em;
+        line-height: 1.08;
+        text-wrap: balance;
       }
-      .section-header p {
-        color: var(--muted);
-        font-size: 1.05rem;
-      }
+      .section-heading > p:last-child { color: var(--muted); font-size: 1.02rem; }
 
-      .services {
+      .school-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0,1fr));
-        gap: 24px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
       }
-      .service-card {
-        background: #fff;
+      .school-card {
+        position: relative;
+        min-height: 245px;
+        padding: 29px 27px;
         border: 1px solid var(--line);
         border-radius: var(--radius);
-        padding: 28px 24px;
-        box-shadow: 0 12px 30px rgba(11, 46, 85, 0.04);
+        background: #fff;
+        box-shadow: 0 12px 30px rgba(8,36,63,.04);
+        transition: transform .2s ease, box-shadow .2s ease;
       }
-      .service-icon {
-        width: 58px;
-        height: 58px;
-        display: grid;
+      .school-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+      .school-step {
+        display: inline-grid;
+        width: 43px;
+        height: 43px;
+        margin-bottom: 20px;
         place-items: center;
-        border-radius: 16px;
-        background: linear-gradient(135deg, rgba(13,61,114,0.12), rgba(197,71,58,0.08));
-        color: var(--navy);
-        font-size: 1.5rem;
-        font-weight: 800;
-        margin-bottom: 18px;
-      }
-      .service-card h3 {
-        color: var(--navy-deep);
-        font-size: 1.52rem;
-        margin-bottom: 10px;
-      }
-      .service-card p {
-        color: var(--muted);
-        margin-bottom: 16px;
-      }
-      .service-card a {
-        text-decoration: none;
+        border-radius: 13px;
+        background: var(--cream);
         color: var(--red);
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 700;
+      }
+      .school-card h3 { margin-bottom: 9px; color: var(--navy-deep); font-size: 1.35rem; }
+      .school-card p { margin-bottom: 18px; color: var(--muted); font-size: .94rem; }
+      .text-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--red);
+        text-decoration: none;
+        font-size: .9rem;
         font-weight: 800;
       }
+      .text-link::after { content: "→"; transition: transform .18s ease; }
+      .text-link:hover::after { transform: translateX(4px); }
 
-      .about-wrap {
-        background: linear-gradient(180deg, #edf4fb 0%, #f8fafc 100%);
-        border-top: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
+      .about-section {
+        background: #edf3f8;
+        border-block: 1px solid var(--line);
       }
       .about-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 46px;
         align-items: center;
+        gap: clamp(34px, 6vw, 76px);
       }
-      .about-media {
+      .about-photo {
         position: relative;
+        min-height: 470px;
         overflow: hidden;
-        border-radius: 28px;
-        min-height: 440px;
-        background: #dfeaf6;
-        border: 1px solid var(--line);
+        border-radius: 26px;
+        background: #dce7f1;
         box-shadow: var(--shadow);
       }
-      .about-media img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        min-height: 440px;
+      .about-photo img { width: 100%; height: 100%; min-height: 470px; object-fit: cover; }
+      .about-photo::after {
+        position: absolute;
+        inset: 0;
+        border: 1px solid rgba(8,36,63,.08);
+        border-radius: inherit;
+        content: "";
+        pointer-events: none;
       }
-      .about-copy h2 {
-        font-family: Georgia, "Times New Roman", serif;
-        color: var(--navy-deep);
-        font-size: clamp(2.15rem, 3vw, 3rem);
-        line-height: 1.08;
-        letter-spacing: -0.05em;
-        margin-bottom: 16px;
-      }
-      .about-copy p {
-        color: var(--muted);
-        margin-bottom: 18px;
-      }
-      .check-list {
+      .about-copy .section-kicker { color: var(--red); }
+      .about-copy p { margin-bottom: 16px; color: var(--muted); }
+      .commitments {
         display: grid;
         grid-template-columns: repeat(2, minmax(0,1fr));
-        gap: 12px 18px;
-        list-style: none;
+        gap: 12px 16px;
+        margin: 24px 0 29px;
         padding: 0;
-        margin: 24px 0 30px;
+        list-style: none;
       }
-      .check-list li {
+      .commitments li {
+        position: relative;
+        padding-left: 23px;
         color: var(--navy-deep);
+        font-size: .91rem;
         font-weight: 700;
       }
-      .check-list li::before {
-        content: "✓";
+      .commitments li::before {
+        position: absolute;
+        left: 0;
         color: var(--red);
-        margin-right: 10px;
+        content: "✓";
+        font-weight: 900;
       }
 
-      .programs-grid {
+      .programs { background: #fff; }
+      .program-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0,1fr));
-        gap: 22px;
+        gap: 20px;
       }
-      .program {
-        background: #fff;
-        border: 1px solid var(--line);
-        border-radius: 20px;
-        padding: 24px 22px;
-        box-shadow: 0 12px 28px rgba(11, 46, 85, 0.03);
+      .program-card {
+        padding: 27px 25px;
+        border-top: 3px solid var(--gold);
+        border-radius: 3px 3px 17px 17px;
+        background: #f7f9fb;
       }
-      .program h3 {
-        color: var(--navy-deep);
-        font-size: 1.35rem;
-        margin-bottom: 10px;
-      }
-      .program p {
-        color: var(--muted);
-      }
+      .program-card h3 { margin-bottom: 9px; color: var(--navy-deep); font-size: 1.2rem; }
+      .program-card p { color: var(--muted); font-size: .93rem; }
 
-      .highlight-wrap {
+      .community-section { background: var(--cream); }
+      .community-grid {
         display: grid;
-        grid-template-columns: 0.95fr 1.05fr;
-        gap: 26px;
+        grid-template-columns: .9fr 1.1fr;
+        gap: 24px;
         align-items: stretch;
       }
-      .events-panel {
+      .community-panel {
+        padding: 35px;
+        border-radius: 23px;
         background: var(--navy-deep);
         color: #fff;
-        border-radius: 26px;
-        padding: 30px 24px;
         box-shadow: var(--shadow);
       }
-      .events-panel h3 {
-        color: #fff;
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: 1.9rem;
-        letter-spacing: -0.04em;
-        margin-bottom: 24px;
-      }
-      .event-list {
-        display: grid;
-        gap: 16px;
-      }
-      .event-item {
-        border-top: 1px solid rgba(255,255,255,0.12);
-        padding-top: 16px;
-      }
-      .event-item:first-child {
-        border-top: none;
-        padding-top: 0;
-      }
-      .event-item strong {
-        display: block;
-        color: var(--gold-soft);
-        font-size: 0.72rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        margin-bottom: 8px;
-      }
-      .event-item span {
-        display: block;
-        font-size: 1.08rem;
-        font-weight: 700;
-        margin-bottom: 4px;
-      }
-      .event-item small {
-        color: rgba(255,255,255,0.76);
-        font-size: 0.8rem;
-      }
-
-      .feature-card {
-        background: #fff;
-        border: 1px solid var(--line);
-        border-radius: 26px;
-        padding: 30px 28px;
-        box-shadow: 0 12px 30px rgba(11, 46, 85, 0.04);
-      }
-      .feature-card h3 {
-        color: var(--navy-deep);
-        font-size: 1.8rem;
+      .community-panel .section-kicker { color: var(--gold-soft); }
+      .community-panel h2 {
         margin-bottom: 14px;
         font-family: Georgia, "Times New Roman", serif;
-        letter-spacing: -0.04em;
+        font-size: clamp(1.9rem, 3vw, 2.5rem);
+        letter-spacing: -.04em;
+        line-height: 1.1;
       }
-      .feature-card p {
-        color: var(--muted);
-      }
-      .quick-links {
-        display: grid;
-        gap: 12px;
-        margin-top: 20px;
-      }
-      .quick-links a {
-        display: block;
-        padding: 13px 14px;
-        text-decoration: none;
+      .community-panel p { margin-bottom: 24px; color: rgba(255,255,255,.78); }
+      .resource-panel {
+        padding: 34px;
         border: 1px solid var(--line);
-        border-radius: 12px;
-        background: #f3f7fb;
+        border-radius: 23px;
+        background: #fff;
+      }
+      .resource-panel h3 {
+        margin-bottom: 8px;
         color: var(--navy-deep);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.65rem;
+        letter-spacing: -.035em;
+      }
+      .resource-panel > p { margin-bottom: 22px; color: var(--muted); }
+      .resource-list { display: grid; gap: 10px; }
+      .resource-list a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 52px;
+        padding: 12px 15px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #f8fafc;
+        color: var(--navy-deep);
+        text-decoration: none;
+        font-size: .9rem;
         font-weight: 700;
       }
-      .quick-links a:hover { background: #edf5ff; }
+      .resource-list a::after { content: "↗"; color: var(--red); font-size: 1rem; }
+      .resource-list a:hover { border-color: #b7c8d8; background: #f0f5fa; }
 
-      .cta {
-        background: linear-gradient(135deg, var(--navy), var(--navy-deep));
-        color: #fff;
-        padding: 76px 0;
-      }
-      .cta-box {
+      .admissions { padding: 0 0 88px; background: var(--cream); }
+      .admissions-box {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        gap: 24px;
-        background: rgba(255,255,255,0.04);
-        border: 1px solid rgba(255,255,255,0.12);
-        border-radius: 24px;
-        padding: 30px 32px;
+        justify-content: space-between;
+        gap: 28px;
+        padding: 35px 40px;
+        border: 1px solid rgba(255,255,255,.15);
+        border-radius: 22px;
+        background: linear-gradient(120deg, var(--navy), var(--navy-deep));
+        color: #fff;
+        box-shadow: var(--shadow);
       }
-      .cta-box h2 {
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(2rem, 3vw, 2.8rem);
-        line-height: 1.08;
-        letter-spacing: -0.04em;
+      .admissions-box h2 {
         margin-bottom: 6px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(1.8rem, 3vw, 2.65rem);
+        letter-spacing: -.04em;
+        line-height: 1.1;
       }
-      .cta-box p {
-        color: rgba(255,255,255,0.8);
-      }
+      .admissions-box p { color: rgba(255,255,255,.78); }
+      .admissions-box .button { flex: 0 0 auto; }
 
-      footer {
-        background: #0d1d2d;
+      .site-footer {
+        padding: 52px 0 20px;
+        background: #091c2e;
         color: #eaf0f6;
-        padding: 54px 0 22px;
       }
       .footer-grid {
         display: grid;
         grid-template-columns: 1.5fr 1fr 1fr 1fr;
-        gap: 32px;
-        padding-bottom: 28px;
-        border-bottom: 1px solid rgba(255,255,255,0.12);
+        gap: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(255,255,255,.13);
       }
-      .footer-brand { margin-bottom: 12px; }
-      .footer-copy {
-        color: rgba(234,240,246,0.8);
-        max-width: 360px;
-        font-size: 0.94rem;
-      }
-      footer h4 {
+      .footer-brand { margin-bottom: 15px; color: #fff; }
+      .footer-brand .brand-name { color: #fff; }
+      .footer-brand .brand-name small { color: rgba(255,255,255,.65); }
+      .footer-copy { max-width: 360px; color: rgba(234,240,246,.72); font-size: .9rem; }
+      .site-footer h2 {
+        margin-bottom: 13px;
         color: #fff;
-        font-size: 0.82rem;
-        letter-spacing: 0.12em;
+        font-size: .78rem;
+        letter-spacing: .14em;
         text-transform: uppercase;
-        margin: 0 0 14px;
       }
-      footer a,
-      footer address {
-        color: rgba(234,240,246,0.8);
+      .footer-links { display: grid; gap: 7px; }
+      .footer-links a, .site-footer address a {
+        color: rgba(234,240,246,.76);
         text-decoration: none;
-        font-style: normal;
-        line-height: 1.9;
-        font-size: 0.96rem;
+        font-size: .91rem;
       }
-      footer a:hover { color: #fff; }
+      .footer-links a:hover, .site-footer address a:hover { color: #fff; }
+      .site-footer address { color: rgba(234,240,246,.76); font-size: .91rem; font-style: normal; }
       .copyright {
         padding-top: 18px;
+        color: rgba(234,240,246,.58);
         text-align: center;
-        color: rgba(234,240,246,0.72);
-        font-size: 0.8rem;
+        font-size: .78rem;
       }
 
-      @media (max-width: 980px) {
-        .hero-grid,
-        .about-grid,
-        .highlight-wrap,
-        .footer-grid,
-        .programs-grid,
-        .services {
-          grid-template-columns: 1fr;
-        }
-        .stats-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-        .cta-box { flex-direction: column; align-items: flex-start; }
-        nav { justify-content: flex-start; }
+      @media (max-width: 1000px) {
+        .header-inner { align-items: flex-start; flex-direction: column; justify-content: center; gap: 14px; padding: 15px 0; }
+        .main-nav { justify-content: flex-start; }
+        .hero-grid, .about-grid { grid-template-columns: 1fr; }
+        .hero { padding: 76px 0 72px; }
+        .hero-content { max-width: 780px; }
+        .about-photo, .about-photo img { min-height: 380px; }
+        .footer-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
       }
-
-      @media (max-width: 680px) {
-        .header-inner { display: block; padding: 16px 0; }
-        .brand { margin-bottom: 12px; }
-        nav { gap: 10px 16px; }
-        .hero { padding-top: 56px; }
-        .stats-grid { grid-template-columns: 1fr; }
-        .service-card, .feature-card, .program { padding: 22px; }
-        .check-list { grid-template-columns: 1fr; }
-        .topbar-inner { flex-direction: column; justify-content: center; padding: 10px 0; }
-        .cta-box { padding: 22px 20px; }
+      @media (max-width: 720px) {
+        .container { width: min(100% - 30px, 560px); }
+        .utility-inner { min-height: 42px; font-size: .66rem; letter-spacing: .08em; }
+        .main-nav { gap: 10px 16px; }
+        .main-nav a { font-size: .82rem; }
+        .hero { padding: 62px 0 68px; }
+        .hero::after { background: linear-gradient(90deg, rgba(6,31,54,.94), rgba(9,43,73,.74)); }
+        .hero h1 { font-size: clamp(2.7rem, 12vw, 4.3rem); }
+        .values-grid { grid-template-columns: 1fr; }
+        .value-item { min-height: 76px; padding: 15px 20px; }
+        .value-item + .value-item { border-top: 1px solid var(--line); border-left: 0; }
+        section { padding: 68px 0; }
+        .school-grid, .program-grid, .community-grid { grid-template-columns: 1fr; }
+        .school-card { min-height: 0; }
+        .commitments { grid-template-columns: 1fr; }
+        .community-panel, .resource-panel { padding: 27px 23px; }
+        .admissions { padding-bottom: 68px; }
+        .admissions-box { align-items: flex-start; flex-direction: column; padding: 27px 24px; }
+        .footer-grid { grid-template-columns: 1fr 1fr; gap: 26px 18px; }
+      }
+      @media (max-width: 420px) {
+        .brand-name { max-width: 240px; font-size: .88rem; }
+        .brand-mark { flex-basis: 45px; width: 45px; height: 45px; }
+        .utility-inner { align-items: flex-start; flex-direction: column; justify-content: center; gap: 2px; padding: 8px 0; }
+        .main-nav { gap: 8px 12px; }
+        .footer-grid { grid-template-columns: 1fr; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
       }
     </style>
   </head>
   <body>
-    <div class="topbar">
-      <div class="container topbar-inner">
-        <div class="left">Home of the Patriots</div>
-        <div class="right"><a href="#admissions">Enrollment / Apply</a></div>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="utility-bar">
+      <div class="container utility-inner">
+        <span>Home of the Patriots</span>
+        <a href="#admissions">Enrollment information <span aria-hidden="true">↗</span></a>
       </div>
     </div>
 
-    <header>
+    <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="#home" aria-label="Unionville-Sebewaing Area School District home">
           <span class="brand-mark" aria-hidden="true">P</span>
-          <span class="brand-text">
-            Unionville-Sebewaing Area School District
-            <small>Patriots</small>
-          </span>
+          <span class="brand-name">Unionville-Sebewaing Area School District<small>Home of the Patriots</small></span>
         </a>
-        <nav aria-label="Main navigation">
+        <nav class="main-nav" aria-label="Main navigation">
           <a href="#about">About</a>
           <a href="#schools">Schools</a>
           <a href="#programs">Programs</a>
+          <a href="#students">Students</a>
           <a href="#families">Families</a>
-          <a href="#community">Community</a>
-          <a href="#resources">Resources</a>
-          <a class="btn-primary" href="#admissions">Apply Now</a>
+          <a href="#contact">Contact</a>
+          <a class="button button-primary" href="#admissions">Enroll</a>
         </nav>
       </div>
     </header>
 
-    <main id="home">
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Building brighter futures</p>
-            <h1>Educating students with purpose, pride, and heart.</h1>
-            <p>
-              From early learning through graduation, the Unionville-Sebewaing Area School District creates a welcoming,
-              achievement-focused environment where every student is known, supported, and inspired to lead.
+    <main id="main-content">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="container">
+          <div class="hero-content">
+            <p class="eyebrow">Unionville-Sebewaing Area School District</p>
+            <h1 id="hero-title">Rooted in community. Focused on every student.</h1>
+            <p class="hero-copy">
+              A welcoming place to learn, grow, and discover what is possible. We partner with families to help students build
+              strong foundations for the future.
             </p>
             <div class="hero-actions">
-              <a class="btn-primary" href="#admissions">Enroll Your Student</a>
-              <a class="btn-secondary" href="#schools">Learn More</a>
+              <a class="button button-primary" href="#admissions">Explore enrollment</a>
+              <a class="button button-outline" href="#schools">Discover our schools</a>
             </div>
-          </div>
-
-          <div class="hero-panel">
-            <div class="hero-card">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="Students collaborating in a classroom" />
-              <div class="mini-badge">
-                <span>District mission</span>
-                Every student grows with confidence, courage, and opportunity.
-              </div>
-            </div>
+            <div class="hero-note">Proudly serving learners from preschool through grade 12</div>
           </div>
         </div>
       </section>
 
-      <div class="stats">
-        <div class="container stats-grid">
-          <div class="stat">
-            <strong>3</strong>
-            <span>School communities</span>
+      <div class="values-strip" aria-label="District commitments">
+        <div class="container values-grid">
+          <div class="value-item">
+            <span class="value-number" aria-hidden="true">01</span>
+            <div><strong>Every student matters</strong><span>Support to help each learner grow</span></div>
           </div>
-          <div class="stat">
-            <strong>PK-12</strong>
-            <span>Learning journey</span>
+          <div class="value-item">
+            <span class="value-number" aria-hidden="true">02</span>
+            <div><strong>Learning with purpose</strong><span>Strong foundations for what comes next</span></div>
           </div>
-          <div class="stat">
-            <strong>1,200+</strong>
-            <span>Students served</span>
-          </div>
-          <div class="stat">
-            <strong>Patriots</strong>
-            <span>Community pride</span>
+          <div class="value-item">
+            <span class="value-number" aria-hidden="true">03</span>
+            <div><strong>Community makes us stronger</strong><span>Families and schools working together</span></div>
           </div>
         </div>
       </div>
 
-      <section id="schools">
+      <section id="schools" aria-labelledby="schools-title">
         <div class="container">
-          <div class="section-header">
-            <p class="eyebrow">Student focus</p>
-            <h2>Connected learning at every stage.</h2>
-            <p>
-              We support strong academics, meaningful relationships, and opportunities that help students discover their
-              strengths and reach their fullest potential.
-            </p>
+          <div class="section-heading">
+            <p class="section-kicker">A path for every learner</p>
+            <h2 id="schools-title">Learning grows with your child.</h2>
+            <p>From first discoveries to graduation, students are encouraged to build skills, confidence, and a sense of belonging at every stage.</p>
           </div>
-
-          <div class="services">
-            <article class="service-card">
-              <div class="service-icon" aria-hidden="true">E</div>
+          <div class="school-grid">
+            <article class="school-card">
+              <span class="school-step" aria-hidden="true">01</span>
               <h3>Elementary</h3>
-              <p>Foundational learning that builds literacy, confidence, creativity, and a strong sense of belonging.</p>
-              <a href="#resources">Explore elementary resources</a>
+              <p>Build a strong start through foundational learning, curiosity, creativity, and caring relationships.</p>
+              <a class="text-link" href="#resources">Elementary resources</a>
             </article>
-
-            <article class="service-card">
-              <div class="service-icon" aria-hidden="true">M</div>
+            <article class="school-card">
+              <span class="school-step" aria-hidden="true">02</span>
               <h3>Middle School</h3>
-              <p>Students grow through challenge, teamwork, and hands-on learning that builds academic and social confidence.</p>
-              <a href="#resources">See middle school support</a>
+              <p>Discover new interests and grow through academic challenges, collaboration, and hands-on learning.</p>
+              <a class="text-link" href="#resources">Middle school resources</a>
             </article>
-
-            <article class="service-card">
-              <div class="service-icon" aria-hidden="true">H</div>
+            <article class="school-card">
+              <span class="school-step" aria-hidden="true">03</span>
               <h3>High School</h3>
-              <p>Preparing students for college, career pathways, leadership, and life through rigorous academic opportunities.</p>
-              <a href="#resources">View high school pathways</a>
+              <p>Explore future possibilities and prepare for the next step through learning, leadership, and involvement.</p>
+              <a class="text-link" href="#resources">High school resources</a>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="about-wrap" id="about">
+      <section class="about-section" id="about" aria-labelledby="about-title">
         <div class="container about-grid">
-          <div class="about-media">
-            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80" alt="District students and staff in a learning environment" />
+          <div class="about-photo">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1400&q=85" alt="Students walking together on a school campus" loading="lazy" />
           </div>
-
           <div class="about-copy">
-            <p class="eyebrow">Why families choose us</p>
-            <h2>A welcoming school community built around student success.</h2>
-            <p>
-              The Unionville-Sebewaing Area School District is proud to provide a caring, engaging environment where students
-              are encouraged to grow academically, personally, and socially.
-            </p>
-            <p>
-              Through community partnerships, dedicated educators, and meaningful opportunities, we help every learner prepare
-              for a bright and purposeful future.
-            </p>
-
-            <ul class="check-list">
-              <li>Personalized support</li>
-              <li>Strong academic focus</li>
-              <li>Safe and welcoming culture</li>
-              <li>Student leadership</li>
+            <p class="section-kicker">A district with heart</p>
+            <h2 id="about-title">A strong school community starts with belonging.</h2>
+            <p>Students do their best when they feel known, supported, and encouraged. Our district is committed to creating a learning environment where every child can take the next step with confidence.</p>
+            <p>Families, educators, and community members all play a part in helping students develop the knowledge and skills they need for a bright future.</p>
+            <ul class="commitments">
+              <li>Supportive relationships</li>
+              <li>Engaging instruction</li>
+              <li>Welcoming schools</li>
               <li>Family partnership</li>
-              <li>Career and college readiness</li>
+              <li>Student opportunities</li>
+              <li>Future-focused learning</li>
             </ul>
-
-            <a class="btn-primary" href="#community">Meet our community</a>
+            <a class="button button-primary" href="#community">Get to know USA</a>
           </div>
         </div>
       </section>
 
-      <section id="programs">
+      <section class="programs" id="programs" aria-labelledby="programs-title">
         <div class="container">
-          <div class="section-header">
-            <p class="eyebrow">District programs</p>
-            <h2>Opportunities that help learners thrive.</h2>
-            <p>
-              Our programming promotes academic excellence, student engagement, and lifelong growth in and beyond the classroom.
-            </p>
+          <div class="section-heading">
+            <p class="section-kicker">More ways to grow</p>
+            <h2 id="programs-title">Learning beyond the lesson.</h2>
+            <p>School is a place to explore interests, practice new skills, and connect learning to life beyond the classroom.</p>
           </div>
+          <div class="program-grid">
+            <article class="program-card">
+              <h3>Academic growth</h3>
+              <p>Build knowledge, confidence, and strong learning habits through meaningful classroom experiences.</p>
+            </article>
+            <article class="program-card" id="students">
+              <h3>Student life</h3>
+              <p>Find opportunities to participate, connect with others, and make the most of the school experience.</p>
+            </article>
+            <article class="program-card">
+              <h3>Future readiness</h3>
+              <p>Develop practical skills and explore options for life after graduation, including college and career pathways.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-          <div class="programs-grid">
-            <div class="program">
-              <h3>Academic Excellence</h3>
-              <p>Rigorous instruction and standards-based learning designed to challenge students and prepare them for success.</p>
-            </div>
-            <div class="program">
-              <h3>Arts &amp; Activities</h3>
-              <p>Creative expression, performance, and student voice through visual arts, music, and extracurricular involvement.</p>
-            </div>
-            <div class="program">
-              <h3>Career Readiness</h3>
-              <p>Hands-on, future-focused learning that helps students build skills for college, trades, and careers.</p>
+      <section class="community-section" id="community" aria-labelledby="community-title">
+        <div class="container community-grid">
+          <div class="community-panel">
+            <p class="section-kicker">Together, we thrive</p>
+            <h2 id="community-title">A place for families to connect.</h2>
+            <p>Stay involved in your student’s learning and find the district information you need. For current announcements, calendars, and updates, visit the district’s official website.</p>
+            <a class="button button-outline" href="https://www.think-usa.org/" target="_blank" rel="noopener noreferrer">Visit the district website <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="resource-panel" id="families">
+            <p class="section-kicker">Family &amp; student resources</p>
+            <h3>Helpful links to get started.</h3>
+            <p>Use these quick links to find enrollment information or connect with district staff.</p>
+            <div class="resource-list" id="resources">
+              <a href="https://www.think-usa.org/enroll" target="_blank" rel="noopener noreferrer">Enrollment information</a>
+              <a href="https://www.think-usa.org/" target="_blank" rel="noopener noreferrer">District news and updates</a>
+              <a href="mailto:info@think-usa.org">Email the district</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="community">
-        <div class="container highlight-wrap">
-          <div class="events-panel">
-            <h3>Upcoming events</h3>
-            <div class="event-list">
-              <div class="event-item">
-                <strong>District</strong>
-                <span>School Board Meeting</span>
-                <small>Thursday • 6:30 PM</small>
-              </div>
-              <div class="event-item">
-                <strong>High School</strong>
-                <span>Homecoming Week</span>
-                <small>Next week • Full calendar</small>
-              </div>
-              <div class="event-item">
-                <strong>Elementary</strong>
-                <span>Family Literacy Night</span>
-                <small>Friday • 5:30 PM</small>
-              </div>
-              <div class="event-item">
-                <strong>Community</strong>
-                <span>Parent Square Updates</span>
-                <small>Weekly notifications</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="feature-card" id="families">
-            <h3>Families, students, and staff are at the center.</h3>
-            <p>
-              We provide timely communication, meaningful family involvement, and practical resources that support learning both in
-              and out of school.
-            </p>
-            <div class="quick-links">
-              <a href="#admissions">Enrollment &amp; new student information</a>
-              <a href="#resources">District resources and parent tools</a>
-              <a href="#students">Student services and athletics</a>
-              <a href="#contact">Contact school offices</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="admissions" style="padding-top: 20px;">
-        <div class="container cta-box">
+      <section class="admissions" id="admissions" aria-labelledby="admissions-title">
+        <div class="container admissions-box">
           <div>
-            <h2>Ready to join the Patriot community?</h2>
-            <p>Explore enrollment, school resources, and how we support every learner.</p>
+            <p class="section-kicker">Your next step starts here</p>
+            <h2 id="admissions-title">Join the Patriot community.</h2>
+            <p>Explore enrollment information for your student and connect with the district.</p>
           </div>
-          <a class="btn-primary" href="https://www.think-usa.org/enroll" target="_blank" rel="noreferrer">Start Enrollment</a>
+          <a class="button button-primary" href="https://www.think-usa.org/enroll" target="_blank" rel="noopener noreferrer">Start enrollment <span aria-hidden="true">↗</span></a>
         </div>
       </section>
     </main>
 
-    <footer id="resources">
+    <footer class="site-footer" id="contact">
       <div class="container">
         <div class="footer-grid">
           <div>
-            <div class="brand footer-brand" aria-label="Unionville-Sebewaing Area School District home">
+            <a class="brand footer-brand" href="#home" aria-label="Unionville-Sebewaing Area School District home">
               <span class="brand-mark" aria-hidden="true">P</span>
-              <span class="brand-text" style="color: #fff;">
-                Unionville-Sebewaing Area School District
-                <small style="color: rgba(255,255,255,0.75);">Patriots</small>
-              </span>
-            </div>
-            <p class="footer-copy">
-              We are committed to creating strong schools, connected families, and confident students ready for the future.
-            </p>
+              <span class="brand-name">Unionville-Sebewaing Area School District<small>Home of the Patriots</small></span>
+            </a>
+            <p class="footer-copy">Partnering with families and community to help every student learn, grow, and prepare for the future.</p>
           </div>
-
           <div>
-            <h4>Schools</h4>
-            <div>
-              <a href="#schools">Elementary</a><br />
-              <a href="#schools">Middle School</a><br />
-              <a href="#schools">High School</a>
+            <h2>Explore</h2>
+            <div class="footer-links">
+              <a href="#about">About the district</a>
+              <a href="#schools">Schools</a>
+              <a href="#programs">Programs</a>
             </div>
           </div>
-
           <div>
-            <h4>Quick Links</h4>
-            <div>
-              <a href="#admissions">Enrollment</a><br />
-              <a href="#community">Calendar</a><br />
+            <h2>For families</h2>
+            <div class="footer-links">
               <a href="#families">Family resources</a>
+              <a href="#admissions">Enrollment</a>
+              <a href="https://www.think-usa.org/" target="_blank" rel="noopener noreferrer">District website ↗</a>
             </div>
           </div>
-
-          <div id="contact">
-            <h4>Contact</h4>
+          <div>
+            <h2>Contact</h2>
             <address>
               Unionville-Sebewaing Area School District<br />
-              <a href="mailto:info@think-usa.org">info@think-usa.org</a><br />
-              <a href="tel:+13355551234">(335) 555-1234</a>
+              <a href="mailto:info@think-usa.org">info@think-usa.org</a>
             </address>
           </div>
         </div>
@@ -859,7 +771,7 @@
     </footer>
 
     <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
